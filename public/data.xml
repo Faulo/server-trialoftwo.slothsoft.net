@@ -2,20 +2,21 @@
 <!-- example file containing base tags -->
 
 <game>	
-	<title>Company Name</title>
-	<founding-date>September 1, 2010</founding-date>
-	<website>http://www.website.com/</website>
-	<based-in>Cityville, Metropolisland</based-in>
+	<title>Oilcatz</title>
+	<founding-date>October 28, 2019</founding-date>
+	<website>http://trialoftwo.slothsoft.net</website>
+	<based-in>Bayreuth, Germany</based-in>
 	
-	<press-contact>press-contact@company.com</press-contact>
-	<phone>+00 (1) 22 33 44 55 66</phone>
+	<press-contact>info.slothsoft@gmail.com</press-contact>
+	<phone>+49 15 784 518 211</phone>
 	<address>
-		<line>Address Line 1</line>
-		<line>Address Line 2</line>
-		<line>Address Line 3</line>
+		<line>Bussardweg 23</line>
+		<line>95445 Bayreuth</line>
+		<line>Germany</line>
 	</address>
 
 	<socials>
+		<!--
 		<social>
 			<name>twitter.com/MyCompanyName</name>
 			<link>twitter.com/MyCompanyName</link>
@@ -28,6 +29,7 @@
 			<name>Skype</name>
 			<link>callto:MySkypeName</link>
 		</social>
+		-->
 	</socials>
 
 	<description>	
@@ -46,6 +48,7 @@
 	</histories>
 		
 	<trailers>
+		<!--
 		<trailer>
 			<name>This video is nice</name>
 			<youtube>7jQbITg0MSk</youtube>
@@ -55,9 +58,11 @@
 			<youtube>0CevOaYrYDA</youtube>
 			<vimeo>12536488</vimeo>
 		</trailer>
+		-->
 	</trailers>
 	
 	<awards>
+		<!--
 		<award>
 			<description>Winner in this highly relevant contest.</description>
 			<info>Award Location, 20 October, 1989</info>
@@ -74,6 +79,7 @@
 			<description>Nomination for this prestigious award.</description>
 			<info>Award Ceremony, 4 December, 1991</info>
 		</award>
+		-->
 	</awards>
 	
 	<quotes>
@@ -117,23 +123,10 @@
 	</additionals>
 	
 	<credits>
-		<credit>
-			<person>John Doe</person>
-			<role>Artist, Freelancer</role>
-		</credit>
-		<credit>
-			<person>Oliver Twist</person>
-			<website>www.olivertwist.com</website>
-			<role>Artist, Freelancer</role>
-		</credit>
-		<credit>
-			<person>Jane Doette</person>
-			<website>www.olivertwist.com</website>
-			<role>Music, Freelancer</role>
-		</credit>
 	</credits>
 	
 	<contacts>
+		<!--
 		<contact>
 			<name>Inquiries</name>
 			<mail>rami@vlambeer.com</mail>
@@ -150,5 +143,6 @@
 			<name>Web</name>
 			<link>MyCompanyWebsite.com</link>
 		</contact>
+		-->
 	</contacts>
 </game>
