@@ -26,13 +26,14 @@
 			<use-template ref="/xsl/_company" />
 			<import ref="/api/default" />
 			<use-document ref="/company" name="company" />
+			<use-document ref="/game" name="game" />
 			<use-document ref="/static/images" name="images" />
 		</fragment>
 		<fragment name="game">
 			<use-template ref="/xsl/_game" />
 			<import ref="/api/default" />
-			<use-document ref="/game" name="game" />
 			<use-document ref="/company" name="company" />
+			<use-document ref="/game" name="game" />
 			<use-document ref="/static/images" name="images" />
 		</fragment>
 	</fragment>

@@ -7,6 +7,14 @@
 	<xsl:variable name="game" select="/*/*[@name='game']/game" />
 	<xsl:variable name="images" select="/*/*[@name='images']/*/*" />
 	
+	<xsl:variable name="trailers" select="$company/trailers/*" />
+	<xsl:variable name="awards" select="$company/awards/*" />
+	<xsl:variable name="quotes" select="$company/quotes/*" />
+	<xsl:variable name="additionals" select="$company/additionals/*" />
+	<xsl:variable name="credits" select="$company/credits/*" />
+	<xsl:variable name="contacts" select="$company/contacts/*" />
+	<xsl:variable name="socials" select="$company/socials/*" />
+
 	<xsl:template match="/*">
 		<xsl:variable name="requestedPage" select="*[@name='sites']//*[@current]" />
 		<xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
@@ -44,7 +52,7 @@
 								<li>
 									<a href="#projects">Projects</a>
 								</li>
-								<xsl:if test="$company/trailers/*">
+								<xsl:if test="$trailers">
 									<li>
 										<a href="#trailers">Videos</a>
 									</li>
@@ -57,27 +65,27 @@
 								<li>
 									<a href="#logo">Logo &amp; Icon</a>
 								</li>
-								<xsl:if test="$company/awards/*">
+								<xsl:if test="$awards">
 									<li>
 										<a href="#awards">Awards &amp; Recognition</a>
 									</li>
 								</xsl:if>
-								<xsl:if test="$company/quotes/*">
+								<xsl:if test="$quotes">
 									<li>
 										<a href="#quotes">Selected Articles</a>
 									</li>
 								</xsl:if>
-								<xsl:if test="$company/additionals/*">
+								<xsl:if test="$additionals">
 									<li>
 										<a href="#links">Additional Links</a>
 									</li>
 								</xsl:if>
-								<xsl:if test="$company/credits/*">
+								<xsl:if test="$credits">
 									<li>
 										<a href="#credits">Team</a>
 									</li>
 								</xsl:if>
-								<xsl:if test="$company/contacts/*">
+								<xsl:if test="$contacts">
 									<li>
 										<a href="#contact">Contact</a>
 									</li>
@@ -92,14 +100,14 @@
 									<p>
 										<strong>Developer:</strong>
 										<br />
-										<a href="">Oilcatz</a>
+										<a href="{$company/website}"><xsl:value-of select="$company/title"/></a>
 										<br />
-										Based in Bayreuth, Germany
+										Based in <xsl:value-of select="$company/based-in"/>
 									</p>
 									<p>
 										<strong>Founding date:</strong>
 										<br />
-										October 28, 2019
+										<xsl:value-of select="$company/founding-date"/>
 									</p>
 									<p>
 										<strong>Website:</strong>
@@ -111,16 +119,24 @@
 										<br />
 										<a href="mailto:info.slothsoft@gmail.com">info.slothsoft@gmail.com</a>
 									</p>
-									<p>
-										<strong>Social:</strong>
-										<br />
-									</p>
-									<p>
-										<strong>Releases:</strong>
-										<br />
-										<a href="sheet.php?p=trialoftwo">Trialoftwo</a>
-										<br />
-									</p>
+									<xsl:if test="$socials">
+										<p>
+											<strong>Social:</strong>
+											<br />
+											<xsl:for-each select="$socials">
+												<a href="{link}"><xsl:value-of select="name"/></a><br/>
+											</xsl:for-each>
+										</p>
+									</xsl:if>
+									<xsl:if test="$game">
+										<p>
+											<strong>Releases:</strong>
+											<br />
+											<xsl:for-each select="$game">
+												<a href="{website}"><xsl:value-of select="title"/></a><br/>
+											</xsl:for-each>
+										</p>
+									</xsl:if>
 									<p>
 										<strong>Address:</strong>
 										<br />
@@ -171,14 +187,17 @@
 								</div>
 							</div>
 
-							<hr />
-
-							<h2 id="trailers">Videos</h2>
-							<p>
-								There are currently no trailers available for Oilcatz. Check back later for more or
-								<a href="#contact">contact us</a>
-								for specific requests!
-							</p>
+							
+							<xsl:if test="$trailers">
+								<hr />
+	
+								<h2 id="trailers">Videos</h2>
+								<p>
+									There are currently no trailers available for Oilcatz. Check back later for more or
+									<a href="#contact">contact us</a>
+									for specific requests!
+								</p>
+							</xsl:if>
 							
 							<xsl:if test="$images">
 								<hr />

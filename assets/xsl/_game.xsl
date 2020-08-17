@@ -5,28 +5,42 @@
 
 	<xsl:variable name="company" select="/*/*[@name='company']/game" />
 	<xsl:variable name="game" select="/*/*[@name='game']/game" />
+	<xsl:variable name="images" select="/*/*[@name='images']/*/*" />
+	
+	<xsl:variable name="trailers" select="$game/trailers/*" />
+	<xsl:variable name="awards" select="$game/awards/*" />
+	<xsl:variable name="quotes" select="$game/quotes/*" />
+	<xsl:variable name="additionals" select="$game/additionals/*" />
+	<xsl:variable name="credits" select="$game/credits/*" />
+	<xsl:variable name="contacts" select="$game/contacts/*" />
+	<xsl:variable name="socials" select="$game/socials/*" />
+	
+	<xsl:variable name="platforms" select="$game/platforms/*" />
+	<xsl:variable name="prices" select="$game/prices/*" />
 
 	<xsl:template match="/*">
 		<xsl:variable name="requestedPage" select="*[@name='sites']//*[@current]" />
 		<xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
 		<html>
 			<head>
-				<meta charset="utf-8" />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-
 				<title>
 					<xsl:value-of select="$game/title" />
 					-
 					<xsl:value-of select="$company/title" />
 				</title>
+				
+				<meta charset="utf-8" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+				<link rel="icon" type="image/png" href="/favicon.ico/" />
 			</head>
 
 			<body>
 				<div class="uk-container uk-container-center">
 					<div class="uk-grid">
 						<div id="navigation" class="uk-width-medium-1-4">
-							<h1 class="nav-header">Oilcatz</h1>
-							<a class="nav-header" href="oilcatz/" target="_self">press kit</a>
+							<h1 class="nav-header"><xsl:value-of select="$company/title"/></h1>
 							<ul class="uk-nav uk-nav-side">
 								<li>
 									<a href="#factsheet">Factsheet</a>
@@ -38,235 +52,209 @@
 									<a href="#history">History</a>
 								</li>
 								<li>
-									<a href="#projects">Projects</a>
+									<a href="#features">Features</a>
 								</li>
-								<xsl:if test="$company/trailers/*">
-									<li>
-										<a href="#trailers">Videos</a>
-									</li>
-								</xsl:if>
-								<xsl:if test="$company/images/*">
-									<li>
-										<a href="#images">Images</a>
-									</li>
-								</xsl:if>
+								<li>
+									<a href="#trailers">Videos</a>
+								</li>
+								<li>
+									<a href="#images">Images</a>
+								</li>
 								<li>
 									<a href="#logo">Logo &amp; Icon</a>
 								</li>
+								<xsl:if test="$awards">
+									<li>
+										<a href="#awards">Awards &amp; Recognition</a>
+									</li>
+								</xsl:if>
+								<xsl:if test="$quotes">
+									<li>
+										<a href="#quotes">Selected Articles</a>
+									</li>
+								</xsl:if>
+								<xsl:if test="$additionals">
+									<li>
+										<a href="#links">Additional Links</a>
+									</li>
+								</xsl:if>
 								<li>
-									<a href="#quotes">Selected Articles</a>
+									<a href="#about">About <xsl:value-of select="$company/title"/></a>
 								</li>
-								<li>
-									<a href="#links">Additional Links</a>
-								</li>
-								<li>
-									<a href="#about">About Oilcatz</a>
-								</li>
-								<li>
-									<a href="#credits">Team</a>
-								</li>
-								<li>
-									<a href="#contact">Contact</a>
-								</li>
+								<xsl:if test="$credits">
+									<li>
+										<a href="#credits">Team</a>
+									</li>
+								</xsl:if>
+								<xsl:if test="$contacts">
+									<li>
+										<a href="#contact">Contact</a>
+									</li>
+								</xsl:if>
 							</ul>
 						</div>
 						<div id="content" class="uk-width-medium-3-4">
+							<img src="/header/" class="header" />
 							<div class="uk-grid">
 								<div class="uk-width-medium-2-6">
 									<h2 id="factsheet">Factsheet</h2>
 									<p>
+										<strong>Game:</strong>
+										<br/>
+										<xsl:value-of select="$game/title"/>
+									</p>
+									<p>
 										<strong>Developer:</strong>
 										<br />
-										<a href="oilcatz/">Oilcatz</a>
+										<a href="{$company/website}"><xsl:value-of select="$company/title"/></a>
 										<br />
-										Based in Bayreuth, Germany
+										Based in <xsl:value-of select="$company/based-in"/>
 									</p>
 									<p>
 										<strong>Release date:</strong>
 										<br />
-										2021
+										<xsl:value-of select="$game/release-date"/>
 									</p>
-
-									<p>
-										<strong>Platforms:</strong>
-										<br />
-									</p>
+									<xsl:if test="$platforms">
+										<p>
+											<strong>Platforms:</strong>
+											<br />
+											<xsl:for-each select="$platforms">
+												<a href="{link}"><xsl:value-of select="name"/></a><br/>
+											</xsl:for-each>
+										</p>
+									</xsl:if>
 									<p>
 										<strong>Website:</strong>
 										<br />
-										<a href="http://trialoftwo.slothsoft.net">http://trialoftwo.slothsoft.net</a>
+										<a href="{$game/website}"><xsl:value-of select="$game/website"/></a>
 									</p>
-									<p>
-										<strong>Regular Price:</strong>
-										<br />
-										-
-									</p>
+									<xsl:if test="$prices">
+										<p>
+											<strong>Regular Price:</strong>
+											<br />
+											<xsl:for-each select="$prices">
+												<a href="{link}"><xsl:value-of select="name"/></a><br/>
+											</xsl:for-each>
+										</p>
+									</xsl:if>
 								</div>
 								<div class="uk-width-medium-4-6">
 									<h2 id="description">Description</h2>
-									<p>
-										Hello. This is a short compilation of facts about the game. Lorem ipsum dolor sit amet, consectetur adipisicing
-										elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-										exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-										in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-									</p>
+									<xsl:for-each select="$game/description">
+										<p>
+											<xsl:value-of select="."/>
+										</p>
+									</xsl:for-each>
+
 									<h2 id="history">History</h2>
-									Warning: count(): Parameter must be an array or an object that implements Countable in
-									C:\Webserver\htdocs\vhosts\trialoftwo.slothsoft.net\public\presskit\sheet.php on line 439
-
-									Call Stack:
-									0.0000 405584 1. {main}() C:\Webserver\htdocs\vhosts\trialoftwo.slothsoft.net\public\presskit\sheet.php:0
-
-									<p>
-										Since we're an indie developer, we want a history to our game. This paragraph will explain this history in short.
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-										magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-										pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-										est laborum.
-									</p>
-									Warning: count(): Parameter must be an array or an object that implements Countable in
-									C:\Webserver\htdocs\vhosts\trialoftwo.slothsoft.net\public\presskit\sheet.php on line 456
-
-									Call Stack:
-									0.0000 405584 1. {main}() C:\Webserver\htdocs\vhosts\trialoftwo.slothsoft.net\public\presskit\sheet.php:0
-
-									<h2>Features</h2>
+									<xsl:for-each select="$game/history">
+										<p>
+											<xsl:value-of select="."/>
+										</p>
+									</xsl:for-each>
+									
+									<h2 id="features">Features</h2>
 									<ul>
-										<li>Includes something really interesting about the game which players will love.</li>
-										<li>This feature line is about the 8-bit pixels that are no doubt featuring in this game.</li>
-										<li>Since it is unlikely that the audio isn't fucking amazing, say something about the audio, maybe?</li>
-										<li>Make sure to stress that everything about this game is absolutely fabulous.</li>
-										<li>Something to wrap up this 5-point feature list with a nice ring to it.</li>
+										<xsl:for-each select="$game/features/*">
+										<li><xsl:value-of select="."/></li>
+										</xsl:for-each>
 									</ul>
 								</div>
 							</div>
 
 							<hr />
-
+							
 							<h2 id="trailers">Videos</h2>
-							<p>
-								There are currently no trailers available for Trial of Two: The Dojo. Check back later for more or
-								<a href="#contact">contact us</a>
-								for specific requests!
-							</p>
+							
+							<xsl:choose>
+								<xsl:when test="$trailers">
+									<div class="uk-grid trailers"></div>
+								</xsl:when>
+								<xsl:otherwise>
+									<p class="trailers-text">
+									There are currently no trailers available for <xsl:value-of select="$game/title"/>. Check back later for more or
+									<a href="#contact">contact us</a>
+									for specific requests!
+								</p>
+								</xsl:otherwise>
+							</xsl:choose>
+							
 							<hr />
 
 							<h2 id="images">Images</h2>
-							<div class="uk-grid images"></div>
-							<p class="images-text">
-								There are currently no screenshots available for Trial of Two: The Dojo. Check back later for more or
-								<a href="#contact">contact us</a>
-								for specific requests!
-							</p>
+							<xsl:choose>
+								<xsl:when test="$images">
+									<div class="uk-grid images">
+									<xsl:for-each select="$images">
+										<div class="uk-width-medium-1-2">
+											<a href="{@href}">
+												<img src="{@href}" alt="{@name}" />
+											</a>
+										</div>
+									</xsl:for-each></div>
+								</xsl:when>
+								<xsl:otherwise>
+									<p class="images-text">
+									There are currently no screenshots available for <xsl:value-of select="$game/title"/>. Check back later for more or
+									<a href="#contact">contact us</a>
+									for specific requests!
+								</p>
+								</xsl:otherwise>
+							</xsl:choose>
 							<hr />
 
 							<h2 id="logo">Logo &amp; Icon</h2>
 							<div class="uk-grid images"></div>
 							<p>
-								There are currently no logos or icons available for Trial of Two: The Dojo. Check back later for more or
+								There are currently no logos or icons available for <xsl:value-of select="$game/title"/>. Check back later for more or
 								<a href="#contact">contact us</a>
 								for specific requests!
 							</p>
 							<hr />
-							<hr />
-
-							<h2>Selected Articles</h2>
-							<ul>
-								<li>
-									"This is a rather insignificant quote by a highly important person."
-									<br />
-									<cite>
-										- Person Name,
-										<a href="http:">Website</a>
-									</cite>
-								</li>
-								<li>
-									"An extremely positive quote from a rather insignificant person. Also great."
-									<br />
-									<cite>
-										- Some Guy,
-										<a href="http:">This Page Is Visited By 12 Visitors A Month</a>
-									</cite>
-								</li>
-								<li>
-									"I pretend to love this game even though I do not actually understand it."
-									<br />
-									<cite>
-										- Pretentious Bastard,
-										<a href="http:">Artsy Page</a>
-									</cite>
-								</li>
-								<li>
-									"HOLY SHIT SO AMAZING"
-									<br />
-									<cite>
-										- Caps Guy,
-										<a href="http:">Angry Review</a>
-									</cite>
-								</li>
-							</ul>
-							<hr />
-							<h2 id="preview">Request Press Copy</h2>
-							<p>We are afraid this developer has not upgraded their presskit() to use distribute(). For security purposes,
-								this form has been disabled.</p>
-							<hr />
-							<h2 id="links">Additional Links</h2>
-							<hr />
+							
+							<xsl:if test="$awards">
+								<h2 id="awards">Awards &amp; Recognition</h2>
+								<hr />
+							</xsl:if>
+							
+							<xsl:if test="$quotes">
+								<h2 id="quotes">Selected Articles</h2>
+								<hr />
+							</xsl:if>
+							
+							
+							<xsl:if test="$additionals">
+								<h2 id="links">Additional Links</h2>
+								<xsl:for-each select="$additionals">
+									<p>
+										<strong><xsl:value-of select="title"/></strong>
+										<br />
+										<a href="{link}"><xsl:value-of select="description"/></a>
+									</p>
+								</xsl:for-each>
+								<hr />
+							</xsl:if>
 
 							<h2 id="about">About Oilcatz</h2>
-							<p>
-								<strong>Boilerplate</strong>
-								<br />
-
-								We're games studio and we make games. We're also capable of editing XML files.
-
-							</p>
-
-							<p>
-								<strong>More information</strong>
-								<br />
-								More information on Oilcatz, our logo &amp; relevant media are available
-								<a href="oilcatz/">here</a>
-								.
-							</p>
+							<xsl:for-each select="$company/description">
+								<p>
+									<xsl:value-of select="."/>
+								</p>
+							</xsl:for-each>
 
 							<hr />
 
 							<div class="uk-grid">
 								<div class="uk-width-medium-1-2">
-									<h2 id="credits">Trial of Two: The Dojo Credits</h2>
-									<p>
-										<strong>Katharina Broswik</strong>
-										<br />
-										<a href="twitter.com/xPetrichora">art direction, level design</a>
-									</p>
-									<p>
-										<strong>Robin Daraban</strong>
-										<br />
-										creative direction, programming, A.I. design
-									</p>
-									<p>
-										<strong>Stephi Dietzel</strong>
-										<br />
-										<a href="twitter.com/StephDiy">art, character design</a>
-									</p>
-									<p>
-										<strong>Paul Redetzky</strong>
-										<br />
-										<a href="paulrdi.de">music</a>
-									</p>
-									<p>
-										<strong>Daniel Schulz</strong>
-										<br />
-										<a href="daniel-schulz.slothsoft.net">technical direction, game design</a>
-									</p>
-									<p>
-										<strong>Lena Voß</strong>
-										<br />
-										<a href="twitter.com/wenigworte">management</a>
-									</p>
+									<h2 id="credits"><xsl:value-of select="$game/title"/> Credits</h2>
+									<xsl:for-each select="$credits">
+										<p>
+											<strong><xsl:value-of select="person"/></strong>
+											<br />
+											<a href="{website}"><xsl:value-of select="role"/></a>
+										</p>
+									</xsl:for-each>
 								</div>
 								<div class="uk-width-medium-1-2">
 									<h2 id="contact">Contact</h2>

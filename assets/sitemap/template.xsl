@@ -6,6 +6,8 @@
 		<domain name="trialoftwo.slothsoft.net" vendor="oilcatz" module="trialoftwo.slothsoft.net" ref="pages/game"
 			status-active="" status-public="" sfd:languages="en-us">
 			<page name="Oilcatz" ref="pages/company" status-active="" status-public="" />
+			<page name="favicon.ico" ref="/static/favicon" status-active=""/>
+			<page name="header" ref="/static/header" status-active=""/>
 		</domain>
 	</xsl:template>
 </xsl:stylesheet>

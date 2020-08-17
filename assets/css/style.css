@@ -48,11 +48,13 @@ img {
 	text-decoration: line-through;
 }
 
-#content div.images div {
+#content div.images div,
+#content div.trailers div {
 	padding-bottom: 25px;
 }
 
-#content p.images-text {
+#content p.images-text,
+#content p.trailers-text {
 	margin-top: -15px;
 }
 

@@ -97,6 +97,7 @@
 	</awards>
 	
 	<quotes>
+		<!-- 
 		<quote>
 			<description>This is a rather insignificant quote by a highly important person.</description>
 			<name>Person Name</name>
@@ -121,52 +122,47 @@
 			<website>Angry Review</website>
 			<link>http://</link>
 		</quote>
+		 -->
 	</quotes>
 	
 	<additionals>
-		<!--
 		<additional>
-			<title>Original Soundtrack</title>
-			<description>Available for free from</description>
-			<link>http://somemusicsite.com/thislink</link>
+			<title>Game Database Schema</title>
+			<description>The proprietary XML schema used by Trial of Two's log files.</description>
+			<link>http://schema.slothsoft.net/trialoftwo/database/</link>
 		</additional>
-		<additional>
-			<title>Release Blog Post</title>
-			<description>The blog-post through which this game was released is available at</description>
-			<link>http://vlambeer.com/bloglink</link>
-		</additional>
-		-->
 	</additionals>
 	
 	<credits>
 		<credit>
 			<person>Katharina Broswik</person>
-			<website>twitter.com/xPetrichora</website>
-			<role>art direction, level design</role>
+			<website>https://twitter.com/xPetrichora</website>
+			<role>Art Director, Level Designer, Programmer, Sound Designer</role>
 		</credit>
 		<credit>
 			<person>Robin Daraban</person>
-			<role>creative direction, programming, A.I. design</role>
+			<website>https://ninjacactusgames.itch.io/</website>
+			<role>Creative Director, Programmer, A.I. Designer, Visual Effects Artist</role>
 		</credit>
 		<credit>
-			<person>Stephi Dietzel</person>
-			<website>twitter.com/StephDiy</website>
-			<role>art, character design</role>
+			<person>Stephanie Dietzel</person>
+			<website>https://www.artstation.com/stephdiy</website>
+			<role>3D Artist, 3D Animator, Character Designer</role>
 		</credit>
 		<credit>
 			<person>Paul Redetzky</person>
-			<website>www.paulrdi.de/</website>
-			<role>music</role>
+			<website>https://twitter.com/PaulRdy</website>
+			<role>Composer</role>
 		</credit>
 		<credit>
 			<person>Daniel Schulz</person>
-			<website>daniel-schulz.slothsoft.net</website>
-			<role>technical direction, game design</role>
+			<website>http://daniel-schulz.slothsoft.net</website>
+			<role>Technical Director, Game Designer</role>
 		</credit>
 		<credit>
 			<person>Lena Voß</person>
-			<website>twitter.com/wenigworte</website>
-			<role>management</role>
+			<website>https://twitter.com/wenigworte</website>
+			<role>Producer</role>
 		</credit>
 	</credits>
 </game>
