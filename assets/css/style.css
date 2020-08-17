@@ -2,7 +2,7 @@ body {
 	padding: 15px 0;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	font-size: 0.9em;
-	line-height:1.6em;
+	line-height: 1.6em;
 }
 
 img {
@@ -32,7 +32,7 @@ img {
 }
 
 #content h2 {
-	font-family: Georgia, "Times New Roman", Times, serif;s
+	font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 #content img.header {
@@ -71,7 +71,7 @@ img {
 	height: 100%;
 }
 
-@media (max-width: 767px) {
+@media ( max-width : 767px) {
 	h2 {
 		margin-top: 25px;
 	}
