@@ -1,36 +1,50 @@
 <?xml version="1.0"?>
 <assets xmlns="http://schema.slothsoft.net/farah/module">
 	<resource-directory name="css" type="text/css" />
+    <resource-directory name="js" type="application/javascript"/>
 	<resource-directory name="xsl" type="application/xslt+xml" />
 	<resource-directory name="dictionary" type="application/xml" />
+	
+	<resource name="company" type="application/xml" />
+	<resource name="game" type="application/xml" />
 
 	<directory name="sitemap">
 		<resource use="template" name="template" type="application/xslt+xml" />
 	</directory>
 
 	<directory name="static">
-		<resource-directory name="images" path="images" type="image/png" />
-		<resource-directory name="videos" path="videos" type="video/*" />
+		<resource-directory name="images" path="images" type="image/*" />
+		<resource-directory name="trailers" path="videos" type="video/*" />
 		<resource-directory name="downloads" path="downloads" type="video/*" />
 
 		<resource name="favicon" path="favicon.png" type="image/png" />
+		<resource name="header" path="header.png" type="image/png" />
 	</directory>
 
 	<fragment name="pages">
 		<fragment name="company">
 			<use-template ref="/xsl/_company" />
 			<import ref="/api/default" />
+			<use-document ref="/company" name="company" />
+			<use-document ref="/static/images" name="images" />
 		</fragment>
 		<fragment name="game">
 			<use-template ref="/xsl/_game" />
 			<import ref="/api/default" />
+			<use-document ref="/game" name="game" />
+			<use-document ref="/company" name="company" />
+			<use-document ref="/static/images" name="images" />
 		</fragment>
 	</fragment>
 
 	<fragment name="api">
 		<fragment name="default">
 			<use-document ref="//slothsoft@farah/sites" name="sites" />
+			<import ref="/api/uikit" />
 			<link-stylesheet ref="/css/style" />
+		</fragment>
+		<fragment name="uikit">
+			<link-stylesheet ref="/css/uikit-gradient" />
 		</fragment>
 	</fragment>
 </assets>
