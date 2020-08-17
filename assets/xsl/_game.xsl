@@ -12,8 +12,9 @@
 	<xsl:variable name="quotes" select="$game/quotes/*" />
 	<xsl:variable name="additionals" select="$game/additionals/*" />
 	<xsl:variable name="credits" select="$game/credits/*" />
-	<xsl:variable name="contacts" select="$game/contacts/*" />
-	<xsl:variable name="socials" select="$game/socials/*" />
+	
+	<xsl:variable name="contacts" select="$company/contacts/*" />
+	<xsl:variable name="socials" select="$company/socials/*" />
 	
 	<xsl:variable name="platforms" select="$game/platforms/*" />
 	<xsl:variable name="prices" select="$game/prices/*" />
@@ -258,6 +259,13 @@
 								</div>
 								<div class="uk-width-medium-1-2">
 									<h2 id="contact">Contact</h2>
+									<xsl:for-each select="$contacts">
+										<p>
+											<strong><xsl:value-of select="name"/></strong>
+											<br />
+											<a href="mailto:{mail}"><xsl:value-of select="mail"/></a>
+										</p>
+									</xsl:for-each>
 								</div>
 							</div>
 
