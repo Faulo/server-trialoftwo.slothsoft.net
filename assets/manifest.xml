@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<assets xmlns="http://schema.slothsoft.net/farah/module">
+	<resource-directory name="css" type="text/css" />
+	<resource-directory name="xsl" type="application/xslt+xml" />
+	<resource-directory name="dictionary" type="application/xml" />
+
+	<directory name="sitemap">
+		<resource use="template" name="template" type="application/xslt+xml" />
+	</directory>
+
+	<directory name="static">
+		<resource-directory name="images" path="images" type="image/png" />
+		<resource-directory name="videos" path="videos" type="video/*" />
+		<resource-directory name="downloads" path="downloads" type="video/*" />
+
+		<resource name="favicon" path="favicon.png" type="image/png" />
+	</directory>
+
+	<fragment name="pages">
+		<fragment name="company">
+			<use-template ref="/xsl/_company" />
+			<import ref="/api/default" />
+		</fragment>
+		<fragment name="game">
+			<use-template ref="/xsl/_game" />
+			<import ref="/api/default" />
+		</fragment>
+	</fragment>
+
+	<fragment name="api">
+		<fragment name="default">
+			<use-document ref="//slothsoft@farah/sites" name="sites" />
+			<link-stylesheet ref="/css/style" />
+		</fragment>
+	</fragment>
+</assets>
