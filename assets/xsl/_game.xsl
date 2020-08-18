@@ -315,6 +315,7 @@
 							<xsl:if test="$thanks">
 								<h2 id="about">Special Thanks</h2>
 								<xsl:for-each select="$thanks">
+									<xsl:sort select="substring-after(person, ' ')"/>
 									<xsl:if test="position() > 1">
 										<xsl:text>, </xsl:text>
 									</xsl:if>
