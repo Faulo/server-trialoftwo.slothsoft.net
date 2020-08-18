@@ -6,18 +6,19 @@
 	<xsl:variable name="company" select="/*/*[@name='company']/game" />
 	<xsl:variable name="game" select="/*/*[@name='game']/game" />
 	<xsl:variable name="images" select="/*/*[@name='images']/*/*" />
-	
+
 	<xsl:variable name="trailers" select="$game/trailers/*" />
 	<xsl:variable name="awards" select="$game/awards/*" />
 	<xsl:variable name="quotes" select="$game/quotes/*" />
 	<xsl:variable name="additionals" select="$game/additionals/*" />
 	<xsl:variable name="credits" select="$game/credits/*" />
-	
+
 	<xsl:variable name="contacts" select="$company/contacts/*" />
 	<xsl:variable name="socials" select="$company/socials/*" />
-	
+
 	<xsl:variable name="platforms" select="$game/platforms/*" />
 	<xsl:variable name="prices" select="$game/prices/*" />
+	<xsl:variable name="thanks" select="$game/thanks/*" />
 
 	<xsl:template match="/*">
 		<xsl:variable name="requestedPage" select="*[@name='sites']//*[@current]" />
@@ -29,7 +30,7 @@
 					-
 					<xsl:value-of select="$company/title" />
 				</title>
-				
+
 				<meta charset="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -41,7 +42,9 @@
 				<div class="uk-container uk-container-center">
 					<div class="uk-grid">
 						<div id="navigation" class="uk-width-medium-1-4">
-							<h1 class="nav-header"><xsl:value-of select="$company/title"/></h1>
+							<h1 class="nav-header">
+								<xsl:value-of select="$company/title" />
+							</h1>
 							<ul class="uk-nav uk-nav-side">
 								<li>
 									<a href="#factsheet">Factsheet</a>
@@ -80,7 +83,10 @@
 									</li>
 								</xsl:if>
 								<li>
-									<a href="#about">About <xsl:value-of select="$company/title"/></a>
+									<a href="#about">
+										About
+										<xsl:value-of select="$company/title" />
+									</a>
 								</li>
 								<xsl:if test="$credits">
 									<li>
@@ -101,41 +107,52 @@
 									<h2 id="factsheet">Factsheet</h2>
 									<p>
 										<strong>Game:</strong>
-										<br/>
-										<xsl:value-of select="$game/title"/>
+										<br />
+										<xsl:value-of select="$game/title" />
 									</p>
 									<p>
 										<strong>Developer:</strong>
 										<br />
-										<a href="{$company/website}"><xsl:value-of select="$company/title"/></a>
+										<a href="{$company/website}">
+											<xsl:value-of select="$company/title" />
+										</a>
 										<br />
-										Based in <xsl:value-of select="$company/based-in"/>
+										Based in
+										<xsl:value-of select="$company/based-in" />
 									</p>
 									<p>
 										<strong>Release date:</strong>
 										<br />
-										<xsl:value-of select="$game/release-date"/>
+										<xsl:value-of select="$game/release-date" />
 									</p>
 									<xsl:if test="$platforms">
 										<p>
 											<strong>Platforms:</strong>
 											<br />
 											<xsl:for-each select="$platforms">
-												<a href="{link}"><xsl:value-of select="name"/></a><br/>
+												<a href="{link}">
+													<xsl:value-of select="name" />
+												</a>
+												<br />
 											</xsl:for-each>
 										</p>
 									</xsl:if>
 									<p>
 										<strong>Website:</strong>
 										<br />
-										<a href="{$game/website}"><xsl:value-of select="$game/website"/></a>
+										<a href="{$game/website}">
+											<xsl:value-of select="$game/website" />
+										</a>
 									</p>
 									<xsl:if test="$prices">
 										<p>
 											<strong>Regular Price:</strong>
 											<br />
 											<xsl:for-each select="$prices">
-												<a href="{link}"><xsl:value-of select="name"/></a><br/>
+												<a href="{link}">
+													<xsl:value-of select="name" />
+												</a>
+												<br />
 											</xsl:for-each>
 										</p>
 									</xsl:if>
@@ -144,63 +161,70 @@
 									<h2 id="description">Description</h2>
 									<xsl:for-each select="$game/description">
 										<p>
-											<xsl:value-of select="."/>
+											<xsl:value-of select="." />
 										</p>
 									</xsl:for-each>
 
 									<h2 id="history">History</h2>
 									<xsl:for-each select="$game/history">
 										<p>
-											<xsl:value-of select="."/>
+											<xsl:value-of select="." />
 										</p>
 									</xsl:for-each>
-									
+
 									<h2 id="features">Features</h2>
 									<ul>
 										<xsl:for-each select="$game/features/*">
-										<li><xsl:value-of select="."/></li>
+											<li>
+												<xsl:value-of select="." />
+											</li>
 										</xsl:for-each>
 									</ul>
 								</div>
 							</div>
 
 							<hr />
-							
+
 							<h2 id="trailers">Videos</h2>
-							
+
 							<xsl:choose>
 								<xsl:when test="$trailers">
 									<div class="uk-grid trailers"></div>
 								</xsl:when>
 								<xsl:otherwise>
 									<p class="trailers-text">
-									There are currently no trailers available for <xsl:value-of select="$game/title"/>. Check back later for more or
-									<a href="#contact">contact us</a>
-									for specific requests!
-								</p>
+										There are currently no trailers available for
+										<xsl:value-of select="$game/title" />
+										. Check back later for more or
+										<a href="#contact">contact us</a>
+										for specific requests!
+									</p>
 								</xsl:otherwise>
 							</xsl:choose>
-							
+
 							<hr />
 
 							<h2 id="images">Images</h2>
 							<xsl:choose>
 								<xsl:when test="$images">
 									<div class="uk-grid images">
-									<xsl:for-each select="$images">
-										<div class="uk-width-medium-1-2">
-											<a href="{@href}">
-												<img src="{@href}" alt="{@name}" />
-											</a>
-										</div>
-									</xsl:for-each></div>
+										<xsl:for-each select="$images">
+											<div class="uk-width-medium-1-2">
+												<a href="{@href}">
+													<img src="{@href}" alt="{@name}" />
+												</a>
+											</div>
+										</xsl:for-each>
+									</div>
 								</xsl:when>
 								<xsl:otherwise>
 									<p class="images-text">
-									There are currently no screenshots available for <xsl:value-of select="$game/title"/>. Check back later for more or
-									<a href="#contact">contact us</a>
-									for specific requests!
-								</p>
+										There are currently no screenshots available for
+										<xsl:value-of select="$game/title" />
+										. Check back later for more or
+										<a href="#contact">contact us</a>
+										for specific requests!
+									</p>
 								</xsl:otherwise>
 							</xsl:choose>
 							<hr />
@@ -208,30 +232,36 @@
 							<h2 id="logo">Logo &amp; Icon</h2>
 							<div class="uk-grid images"></div>
 							<p>
-								There are currently no logos or icons available for <xsl:value-of select="$game/title"/>. Check back later for more or
+								There are currently no logos or icons available for
+								<xsl:value-of select="$game/title" />
+								. Check back later for more or
 								<a href="#contact">contact us</a>
 								for specific requests!
 							</p>
 							<hr />
-							
+
 							<xsl:if test="$awards">
 								<h2 id="awards">Awards &amp; Recognition</h2>
 								<hr />
 							</xsl:if>
-							
+
 							<xsl:if test="$quotes">
 								<h2 id="quotes">Selected Articles</h2>
 								<hr />
 							</xsl:if>
-							
-							
+
+
 							<xsl:if test="$additionals">
 								<h2 id="links">Additional Links</h2>
 								<xsl:for-each select="$additionals">
 									<p>
-										<strong><xsl:value-of select="title"/></strong>
+										<strong>
+											<xsl:value-of select="title" />
+										</strong>
 										<br />
-										<a href="{link}"><xsl:value-of select="description"/></a>
+										<a href="{link}">
+											<xsl:value-of select="description" />
+										</a>
 									</p>
 								</xsl:for-each>
 								<hr />
@@ -240,7 +270,7 @@
 							<h2 id="about">About Oilcatz</h2>
 							<xsl:for-each select="$company/description">
 								<p>
-									<xsl:value-of select="."/>
+									<xsl:value-of select="." />
 								</p>
 							</xsl:for-each>
 
@@ -248,12 +278,19 @@
 
 							<div class="uk-grid">
 								<div class="uk-width-medium-1-2">
-									<h2 id="credits"><xsl:value-of select="$game/title"/> Credits</h2>
+									<h2 id="credits">
+										<xsl:value-of select="$game/title" />
+										Credits
+									</h2>
 									<xsl:for-each select="$credits">
 										<p>
-											<strong><xsl:value-of select="person"/></strong>
+											<strong>
+												<xsl:value-of select="person" />
+											</strong>
 											<br />
-											<a href="{website}"><xsl:value-of select="role"/></a>
+											<a href="{website}">
+												<xsl:value-of select="role" />
+											</a>
 										</p>
 									</xsl:for-each>
 								</div>
@@ -261,15 +298,32 @@
 									<h2 id="contact">Contact</h2>
 									<xsl:for-each select="$contacts">
 										<p>
-											<strong><xsl:value-of select="name"/></strong>
+											<strong>
+												<xsl:value-of select="name" />
+											</strong>
 											<br />
-											<a href="mailto:{mail}"><xsl:value-of select="mail"/></a>
+											<a href="mailto:{mail}">
+												<xsl:value-of select="mail" />
+											</a>
 										</p>
 									</xsl:for-each>
 								</div>
 							</div>
 
 							<hr />
+
+							<xsl:if test="$thanks">
+								<h2 id="about">Special Thanks</h2>
+								<xsl:for-each select="$thanks">
+									<xsl:if test="position() > 1">
+										<xsl:text>, </xsl:text>
+									</xsl:if>
+									<span>
+										<xsl:value-of select="person" />
+									</span>
+								</xsl:for-each>
+								<hr />
+							</xsl:if>
 
 							<p>
 								<a href="http://dopresskit.com/">presskit()</a>

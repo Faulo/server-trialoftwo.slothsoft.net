@@ -7,49 +7,30 @@
 	<press-can-request-copy>TRUE</press-can-request-copy>
 
 	<platforms>
-		<!--
-		<platform>
-			<name>PC / Mac</name>
-			<link>http://www.gamesite.com/</link>
-		</platform>
-		<platform>
-			<name>Steam</name>
-			<link>http://www.steampowered.com/</link>
-		</platform>
-		<platform>
-			<name>Apple App Store</name>
-			<link>http://www.itunes.com/</link>
-		</platform>
-		-->
+		<!-- <platform> <name>PC / Mac</name> <link>http://www.gamesite.com/</link> </platform> <platform> <name>Steam</name> <link>http://www.steampowered.com/</link> 
+			</platform> <platform> <name>Apple App Store</name> <link>http://www.itunes.com/</link> </platform> -->
 	</platforms>
-	
+
 	<prices>
-		<!--
-		<price>
-			<currency>USD</currency>
-			<value>$1.99</value>
-		</price>
-		<price>
-			<currency>EUR</currency>
-			<value>€1.59</value>
-		</price>
-		<price>
-			<currency>CAD</currency>
-			<value>$1.99</value>
-		</price>				
-		<price>
-			<currency>GBP</currency>
-			<value>£1.29</value>
-		</price>
-		-->
+		<!-- <price> <currency>USD</currency> <value>$1.99</value> </price> <price> <currency>EUR</currency> <value>€1.59</value> 
+			</price> <price> <currency>CAD</currency> <value>$1.99</value> </price> <price> <currency>GBP</currency> <value>£1.29</value> 
+			</price> -->
 	</prices>
 
 	<description>
-	Hello. This is a short compilation of facts about the game. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		Hello. This is a short compilation of facts about the game. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+		eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+		laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+		dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+		mollit anim id est laborum.
 	</description>
-	
+
 	<history>
-	Since we're an indie developer, we want a history to our game. This paragraph will explain this history in short. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		Since we're an indie developer, we want a history to our game. This paragraph will explain this history in short. Lorem
+		ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+		irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+		cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 	</history>
 
 	<features>
@@ -59,72 +40,30 @@
 		<feature>Make sure to stress that everything about this game is absolutely fabulous.</feature>
 		<feature>Something to wrap up this 5-point feature list with a nice ring to it.</feature>
 	</features>
-	
+
 	<trailers>
-		<!--
-		<trailer>
-			<name>Trailer</name>
-			<youtube>7jQbITg0MSk</youtube>
-			<vimeo>23571681</vimeo>
-		</trailer>
-		<trailer>
-			<name>Gameplay Video</name>
-			<youtube>7jQbITg0MSk</youtube>
-			<vimeo>23571681</vimeo>
-		</trailer>
-		-->
+		<!-- <trailer> <name>Trailer</name> <youtube>7jQbITg0MSk</youtube> <vimeo>23571681</vimeo> </trailer> <trailer> <name>Gameplay 
+			Video</name> <youtube>7jQbITg0MSk</youtube> <vimeo>23571681</vimeo> </trailer> -->
 	</trailers>
-	
+
 	<awards>
-		<!--
-		<award>
-			<description>Winner in this highly relevant contest.</description>
-			<info>Award Location, 20 October, 1989</info>
-		</award>
-		<award>
-			<description>Nomination for this prestigious award.</description>
-			<info>Award Ceremony, 4 December, 1991</info>
-		</award>
-		<award>
-			<description>Winner in this highly relevant contest.</description>
-			<info>Award Location, 20 October, 1989</info>
-		</award>
-		<award>
-			<description>Nomination for this prestigious award.</description>
-			<info>Award Ceremony, 4 December, 1991</info>
-		</award>
-		-->
+		<!-- <award> <description>Winner in this highly relevant contest.</description> <info>Award Location, 20 October, 1989</info> 
+			</award> <award> <description>Nomination for this prestigious award.</description> <info>Award Ceremony, 4 December, 1991</info> 
+			</award> <award> <description>Winner in this highly relevant contest.</description> <info>Award Location, 20 October, 1989</info> 
+			</award> <award> <description>Nomination for this prestigious award.</description> <info>Award Ceremony, 4 December, 1991</info> 
+			</award> -->
 	</awards>
-	
+
 	<quotes>
-		<!-- 
-		<quote>
-			<description>This is a rather insignificant quote by a highly important person.</description>
-			<name>Person Name</name>
-			<website>Website</website>
-			<link>http://</link>
-		</quote>
-		<quote>
-			<description>An extremely positive quote from a rather insignificant person. Also great.</description>
-			<name>Some Guy</name>
-			<website>This Page Is Visited By 12 Visitors A Month</website>
-			<link>http://</link>
-		</quote>
-		<quote>
-			<description>I pretend to love this game even though I do not actually understand it.</description>
-			<name>Pretentious Bastard</name>
-			<website>Artsy Page</website>
-			<link>http://</link>
-		</quote>
-		<quote>
-			<description>HOLY SHIT SO AMAZING</description>
-			<name>Caps Guy</name>
-			<website>Angry Review</website>
-			<link>http://</link>
-		</quote>
-		 -->
+		<!-- <quote> <description>This is a rather insignificant quote by a highly important person.</description> <name>Person 
+			Name</name> <website>Website</website> <link>http://</link> </quote> <quote> <description>An extremely positive quote from 
+			a rather insignificant person. Also great.</description> <name>Some Guy</name> <website>This Page Is Visited By 12 Visitors 
+			A Month</website> <link>http://</link> </quote> <quote> <description>I pretend to love this game even though I do not actually 
+			understand it.</description> <name>Pretentious Bastard</name> <website>Artsy Page</website> <link>http://</link> </quote> 
+			<quote> <description>HOLY SHIT SO AMAZING</description> <name>Caps Guy</name> <website>Angry Review</website> <link>http://</link> 
+			</quote> -->
 	</quotes>
-	
+
 	<additionals>
 		<additional>
 			<title>Game Database Schema</title>
@@ -132,7 +71,7 @@
 			<link>http://schema.slothsoft.net/trialoftwo/database/</link>
 		</additional>
 	</additionals>
-	
+
 	<credits>
 		<credit>
 			<person>Katharina Broswik</person>
@@ -165,4 +104,46 @@
 			<role>Project Manager</role>
 		</credit>
 	</credits>
+
+	<thanks>
+		<thank>
+			<person>Ivette Schmidt</person>
+		</thank>
+		<thank>
+			<person>Magnus Drebenstedt</person>
+		</thank>
+		<thank>
+			<person>Peter Mentz</person>
+		</thank>
+		<thank>
+			<person>Sven Schäfer</person>
+		</thank>
+		<thank>
+			<person>Michael Kind</person>
+		</thank>
+		<thank>
+			<person>Marius Mühleck</person>
+		</thank>
+		<thank>
+			<person>Jan Milosch</person>
+		</thank>
+		<thank>
+			<person>Lisa Zumblick</person>
+		</thank>
+		<thank>
+			<person>Stefan Ensmann</person>
+		</thank>
+		<thank>
+			<person>Christian Keßler</person>
+		</thank>
+		<thank>
+			<person>Stefan Bernstein</person>
+		</thank>
+		<thank>
+			<person>Elisabeth Harzbecker</person>
+		</thank>
+		<thank>
+			<person>Tina Wolfrum</person>
+		</thank>
+	</thanks>
 </game>
