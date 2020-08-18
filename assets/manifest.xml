@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <assets xmlns="http://schema.slothsoft.net/farah/module">
 	<resource-directory name="css" type="text/css" />
-    <resource-directory name="js" type="application/javascript"/>
+	<resource-directory name="js" type="application/javascript" />
 	<resource-directory name="xsl" type="application/xslt+xml" />
 	<resource-directory name="dictionary" type="application/xml" />
-	
+
 	<resource name="company" type="application/xml" />
 	<resource name="game" type="application/xml" />
 

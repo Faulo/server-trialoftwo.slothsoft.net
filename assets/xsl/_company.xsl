@@ -6,7 +6,7 @@
 	<xsl:variable name="company" select="/*/*[@name='company']/game" />
 	<xsl:variable name="game" select="/*/*[@name='game']/game" />
 	<xsl:variable name="images" select="/*/*[@name='images']/*/*" />
-	
+
 	<xsl:variable name="trailers" select="$company/trailers/*" />
 	<xsl:variable name="awards" select="$company/awards/*" />
 	<xsl:variable name="quotes" select="$company/quotes/*" />
@@ -100,14 +100,17 @@
 									<p>
 										<strong>Developer:</strong>
 										<br />
-										<a href="{$company/website}"><xsl:value-of select="$company/title"/></a>
+										<a href="{$company/website}">
+											<xsl:value-of select="$company/title" />
+										</a>
 										<br />
-										Based in <xsl:value-of select="$company/based-in"/>
+										Based in
+										<xsl:value-of select="$company/based-in" />
 									</p>
 									<p>
 										<strong>Founding date:</strong>
 										<br />
-										<xsl:value-of select="$company/founding-date"/>
+										<xsl:value-of select="$company/founding-date" />
 									</p>
 									<p>
 										<strong>Website:</strong>
@@ -124,7 +127,10 @@
 											<strong>Social:</strong>
 											<br />
 											<xsl:for-each select="$socials">
-												<a href="{link}"><xsl:value-of select="name"/></a><br/>
+												<a href="{link}">
+													<xsl:value-of select="name" />
+												</a>
+												<br />
 											</xsl:for-each>
 										</p>
 									</xsl:if>
@@ -133,7 +139,10 @@
 											<strong>Releases:</strong>
 											<br />
 											<xsl:for-each select="$game">
-												<a href="{website}"><xsl:value-of select="title"/></a><br/>
+												<a href="{website}">
+													<xsl:value-of select="title" />
+												</a>
+												<br />
 											</xsl:for-each>
 										</p>
 									</xsl:if>
@@ -187,10 +196,10 @@
 								</div>
 							</div>
 
-							
+
 							<xsl:if test="$trailers">
 								<hr />
-	
+
 								<h2 id="trailers">Videos</h2>
 								<p>
 									There are currently no trailers available for Oilcatz. Check back later for more or
@@ -198,10 +207,10 @@
 									for specific requests!
 								</p>
 							</xsl:if>
-							
+
 							<xsl:if test="$images">
 								<hr />
-	
+
 								<h2 id="images">Images</h2>
 								<div class="uk-grid images">
 									<xsl:for-each select="$images">
@@ -218,7 +227,7 @@
 									<a href="#contact">contact us</a>
 									!
 								</p>
-							
+
 							</xsl:if>
 
 							<hr />
