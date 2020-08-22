@@ -6,6 +6,7 @@
 	<xsl:variable name="company" select="/*/*[@name='company']/game" />
 	<xsl:variable name="game" select="/*/*[@name='game']/game" />
 	<xsl:variable name="images" select="/*/*[@name='images']/*/*" />
+	<xsl:variable name="logos" select="/*/*[@name='logos']/*/*" />
 
 	<xsl:variable name="trailers" select="$game/trailers/*" />
 	<xsl:variable name="awards" select="$game/awards/*" />
@@ -230,14 +231,28 @@
 							<hr />
 
 							<h2 id="logo">Logo &amp; Icon</h2>
-							<div class="uk-grid images"></div>
-							<p>
-								There are currently no logos or icons available for
-								<xsl:value-of select="$game/title" />
-								. Check back later for more or
-								<a href="#contact">contact us</a>
-								for specific requests!
-							</p>
+							<xsl:choose>
+								<xsl:when test="$logos">
+									<div class="uk-grid images">
+										<xsl:for-each select="$logos">
+											<div class="uk-width-medium-1-2">
+												<a href="{@href}">
+													<img src="{@href}" alt="{@name}" />
+												</a>
+											</div>
+										</xsl:for-each>
+									</div>
+								</xsl:when>
+								<xsl:otherwise>
+									<p>
+										There are currently no logos or icons available for
+										<xsl:value-of select="$game/title" />
+										. Check back later for more or
+										<a href="#contact">contact us</a>
+										for specific requests!
+									</p>
+								</xsl:otherwise>
+							</xsl:choose>
 							<hr />
 
 							<xsl:if test="$awards">
@@ -315,7 +330,7 @@
 							<xsl:if test="$thanks">
 								<h2 id="about">Special Thanks</h2>
 								<xsl:for-each select="$thanks">
-									<xsl:sort select="substring-after(person, ' ')"/>
+									<xsl:sort select="substring-after(person, ' ')" />
 									<xsl:if test="position() > 1">
 										<xsl:text>, </xsl:text>
 									</xsl:if>

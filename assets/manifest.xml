@@ -14,6 +14,7 @@
 
 	<directory name="static">
 		<resource-directory name="images" path="images" type="image/*" />
+		<resource-directory name="logos" path="logos" type="image/*" />
 		<resource-directory name="trailers" path="videos" type="video/*" />
 		<resource-directory name="downloads" path="downloads" type="video/*" />
 
@@ -28,6 +29,7 @@
 			<use-document ref="/company" name="company" />
 			<use-document ref="/game" name="game" />
 			<use-document ref="/static/images" name="images" />
+			<use-document ref="/static/logos" name="logos" />
 		</fragment>
 		<fragment name="game">
 			<use-template ref="/xsl/_game" />
@@ -35,6 +37,7 @@
 			<use-document ref="/company" name="company" />
 			<use-document ref="/game" name="game" />
 			<use-document ref="/static/images" name="images" />
+			<use-document ref="/static/logos" name="logos" />
 		</fragment>
 	</fragment>
 
