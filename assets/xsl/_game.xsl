@@ -161,16 +161,12 @@
 								<div class="uk-width-medium-4-6">
 									<h2 id="description">Description</h2>
 									<xsl:for-each select="$game/description">
-										<p>
-											<xsl:value-of select="." />
-										</p>
+										<xsl:copy-of select="node()" />
 									</xsl:for-each>
 
 									<h2 id="history">History</h2>
 									<xsl:for-each select="$game/history">
-										<p>
-											<xsl:value-of select="." />
-										</p>
+										<xsl:copy-of select="node()" />
 									</xsl:for-each>
 
 									<h2 id="features">Features</h2>
@@ -328,7 +324,7 @@
 							<hr />
 
 							<xsl:if test="$thanks">
-								<h2 id="about">Special Thanks</h2>
+								<h2 id="about">Special Thanks to our Playtesters</h2>
 								<xsl:for-each select="$thanks">
 									<xsl:sort select="substring-after(person, ' ')" />
 									<xsl:if test="position() > 1">
@@ -343,10 +339,10 @@
 
 							<p>
 								<a href="http://dopresskit.com/">presskit()</a>
-								by Rami Ismail (
+								<xsl:text> by Rami Ismail (</xsl:text>
 								<a href="https://www.vlambeer.com/">Vlambeer</a>
-								) - also thanks to
-								<a href="sheet.php?p=credits">these fine folks</a>
+								<xsl:text>) - also thanks to </xsl:text>
+								<a href="https://www.vlambeer.com/press/sheet.php?p=credits">these fine folks</a>
 							</p>
 						</div>
 					</div>
