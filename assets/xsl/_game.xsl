@@ -280,9 +280,7 @@
 
 							<h2 id="about">About Oilcatz</h2>
 							<xsl:for-each select="$company/description">
-								<p>
-									<xsl:value-of select="." />
-								</p>
+								<xsl:copy-of select="." />
 							</xsl:for-each>
 
 							<hr />

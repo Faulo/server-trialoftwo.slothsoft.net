@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- example file containing base tags -->
 
-<game>
+<game xmlns:html="http://www.w3.org/1999/xhtml">
 	<title>Oilcatz</title>
 	<founding-date>October 28, 2019</founding-date>
 	<website>http://trialoftwo.slothsoft.net/</website>
@@ -21,7 +21,7 @@
 	</socials>
 
 	<description>
-		We're games studio and we make games. We're also capable of editing XML files.
+		<html:p>We’re a team of 5 students from Germany currently working on our graduation project <html:em>Trial of Two: The Dojo</html:em>. Our goal is to release the game in 2021.</html:p>
 	</description>
 
 	<histories>
