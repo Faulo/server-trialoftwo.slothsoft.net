@@ -2,7 +2,7 @@
 
 <game xmlns:html="http://www.w3.org/1999/xhtml">
 	<title>Trial of Two: The Dojo</title>
-	<release-date>2021</release-date>
+	<release-date>March 2021</release-date>
 	<website>http://trialoftwo.slothsoft.net</website>
 	<press-can-request-copy>TRUE</press-can-request-copy>
 
@@ -78,8 +78,10 @@
 	</features>
 
 	<trailers>
-		<!-- <trailer> <name>Trailer</name> <youtube>7jQbITg0MSk</youtube> <vimeo>23571681</vimeo> </trailer> <trailer> <name>Gameplay 
-			Video</name> <youtube>7jQbITg0MSk</youtube> <vimeo>23571681</vimeo> </trailer> -->
+		<trailer>
+			<name>Trial of Two: The Dojo | Official Trailer</name>
+			<youtube>vM2ShgXisfs</youtube>
+		</trailer>
 	</trailers>
 
 	<awards>
@@ -112,17 +114,17 @@
 		<credit>
 			<person>Katharina Broswik</person>
 			<website>https://twitter.com/xPetrichora</website>
-			<role>Art Director, Level Designer, Programmer, Sound Designer</role>
+			<role>Project Manager, Art Director, Level Designer, Programmer, Sound Designer</role>
 		</credit>
 		<credit>
 			<person>Robin Daraban</person>
 			<website>https://ninjacactusgames.itch.io/</website>
-			<role>Creative Director, Programmer, A.I. Designer, Visual Effects Artist</role>
+			<role>Creative Director, Programmer, A.I. Designer, Visual Effects Artist, Social Media Manager</role>
 		</credit>
 		<credit>
 			<person>Stephanie Dietzel</person>
 			<website>https://www.artstation.com/stephdiy</website>
-			<role>3D Artist, 3D Animator, Character Designer</role>
+			<role>3D Artist, 3D Animator, Character Designer, Treasurer</role>
 		</credit>
 		<credit>
 			<person>Paul Redetzky</person>
@@ -135,7 +137,7 @@
 			<role>Technical Director, Game Designer</role>
 		</credit>
 		<credit>
-			<person>Lena Voß</person>
+			<person>Lena Voß (retired)</person>
 			<website>http://klamueser.de</website>
 			<role>Project Manager</role>
 		</credit>
@@ -180,6 +182,12 @@
 		</thank>
 		<thank>
 			<person>Tina Wolfrum</person>
+		</thank>
+		<thank>
+			<person>Justin Schwab</person>
+		</thank>
+		<thank>
+			<person>Annika Andrzejewska</person>
 		</thank>
 	</thanks>
 </game>

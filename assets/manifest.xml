@@ -20,7 +20,7 @@
 
 		<resource name="favicon" path="Oilcatz_Light_Icon_Small.png" type="image/png" />
 		<resource name="logo" path="Oilcatz_Light_Splash_Large.png" type="image/png" />
-		<resource name="header" path="Oilcatz_Light_Text_Medium.png" type="image/png" />
+		<resource name="header" path="Logo_ToT_Banner_1080p.png" type="image/png" />
 	</directory>
 
 	<fragment name="pages">
