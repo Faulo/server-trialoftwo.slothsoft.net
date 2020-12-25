@@ -1305,16 +1305,16 @@
         },
         {
             "name": "slothsoft/farah",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-farah.git",
-                "reference": "c1523a5b170533b022abd2b0108edc7a80931e11"
+                "reference": "15d44f88791031dab025a3b9bcff06850c93b105"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-farah/zipball/c1523a5b170533b022abd2b0108edc7a80931e11",
-                "reference": "c1523a5b170533b022abd2b0108edc7a80931e11",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-farah/zipball/15d44f88791031dab025a3b9bcff06850c93b105",
+                "reference": "15d44f88791031dab025a3b9bcff06850c93b105",
                 "shasum": ""
             },
             "require": {
@@ -1369,9 +1369,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-farah/issues",
-                "source": "https://github.com/Faulo/slothsoft-farah/tree/1.1.1"
+                "source": "https://github.com/Faulo/slothsoft-farah/tree/1.1.2"
             },
-            "time": "2020-12-25T21:14:48+00:00"
+            "time": "2020-12-25T23:14:22+00:00"
         },
         {
             "name": "slothsoft/w3c",
