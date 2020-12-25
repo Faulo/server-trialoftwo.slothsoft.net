@@ -1,44 +1,38 @@
 {
-	"name": "oilcatz/trialoftwo.slothsoft.net",
-	"type": "project",
-	"description": "trialoftwo.slothsoft.net",
-	"license": "WTFPL",
-	"keywords": [
+	"name" : "oilcatz/trialoftwo.slothsoft.net",
+	"type" : "project",
+	"description" : "trialoftwo.slothsoft.net",
+	"license" : "WTFPL",
+	"keywords" : [
 		"oilcatz",
 		"farah-module",
 		"farah-server"
 	],
-	"autoload": {
-		"psr-0": {
-			"Oilcatz\\ToT\\": "src/"
-		},
-		"files": [
-			"config.php",
-			"src/registerModule.php"
+	"autoload" : {
+		"files" : [
+			"scripts/bootstrap.php"
 		]
 	},
-	"require": {
-		"php": "^7.2",
-		"slothsoft/core": "*",
-		"slothsoft/farah": "*"
+	"require" : {
+		"php" : "^7.2",
+		"slothsoft/core" : "~1.1",
+		"slothsoft/farah" : "~1.1"
 	},
-	"require-dev": {
-		"phpunit/phpunit": "^6.5"
+	"require-dev" : {
+		"phpunit/phpunit" : "~8.0.0"
 	},
-	"autoload-dev": {
-		"classmap": [
-			"tests/"
-		]
+	"autoload-dev" : {
+		"psr-4" : {
+			"Slothsoft\\Server\\TrialOfTwo\\" : "tests"
+		}
 	},
-	"classmap-authoritative": true,
-	"scripts": {
-		"post-autoload-dump": "Slothsoft\\Core\\ServerEnvironment::cleanCacheDirectory"
+	"scripts" : {
+		"post-autoload-dump" : "Slothsoft\\Core\\ServerEnvironment::cleanCacheDirectory"
 	},
-	"homepage": "http://trialoftwo.slothsoft.net",
-	"authors": [
-		{
-			"name": "Daniel Schulz",
-			"email": "info.slothsoft@gmail.com"
+	"homepage" : "http://trialoftwo.slothsoft.net",
+	"authors" : [{
+			"name" : "Daniel Schulz",
+			"email" : "info.slothsoft@gmail.com"
 		}
 	]
 }
