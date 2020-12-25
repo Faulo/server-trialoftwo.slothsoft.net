@@ -10,6 +10,7 @@
 	],
 	"autoload" : {
 		"files" : [
+			"config.php",
 			"scripts/bootstrap.php"
 		]
 	},
