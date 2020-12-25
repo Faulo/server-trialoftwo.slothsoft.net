@@ -8,6 +8,7 @@
 			<page name="Oilcatz" ref="pages/company" status-active="" status-public="" />
 			<page name="favicon.ico" ref="/static/favicon" status-active="" />
 			<page name="header" ref="/static/header" status-active="" />
+			<page name="sitemap" ref="//slothsoft@farah/sitemap-generator" status-active="" />
 		</domain>
 	</xsl:template>
 </xsl:stylesheet>
