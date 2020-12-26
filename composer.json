@@ -17,7 +17,7 @@
 	"require" : {
 		"php" : "7.2 - 8.0",
 		"slothsoft/core" : "^1.1",
-		"slothsoft/farah" : "^1.1"
+		"slothsoft/farah" : "^1.2"
 	},
 	"require-dev" : {
 		"phpunit/phpunit" : "8.5.*"
@@ -28,7 +28,9 @@
 		}
 	},
 	"scripts" : {
-		"post-autoload-dump" : "Slothsoft\\Core\\ServerEnvironment::cleanCacheDirectory"
+		"post-autoload-dump" : "Slothsoft\\Core\\ServerEnvironment::cleanCacheDirectory",
+		"farah-asset" : "@php vendor/slothsoft/farah/scripts/farah-asset.php",
+		"farah-page" : "@php vendor/slothsoft/farah/scripts/farah-page.php"
 	},
 	"homepage" : "http://trialoftwo.slothsoft.net",
 	"authors" : [{

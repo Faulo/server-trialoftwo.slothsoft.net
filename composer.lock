@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "18efad7cb914099ad38b1ca017bc59f1",
+    "content-hash": "528573eb513454f739841730125c6bc2",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -1315,16 +1315,16 @@
         },
         {
             "name": "slothsoft/farah",
-            "version": "1.1.3",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-farah.git",
-                "reference": "1c6542751b0e57cdbf00c82f1c3d261f3af4eb37"
+                "reference": "8ac5a056cac96c02ae5a6e2db905e0a37af37832"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-farah/zipball/1c6542751b0e57cdbf00c82f1c3d261f3af4eb37",
-                "reference": "1c6542751b0e57cdbf00c82f1c3d261f3af4eb37",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-farah/zipball/8ac5a056cac96c02ae5a6e2db905e0a37af37832",
+                "reference": "8ac5a056cac96c02ae5a6e2db905e0a37af37832",
                 "shasum": ""
             },
             "require": {
@@ -1381,9 +1381,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-farah/issues",
-                "source": "https://github.com/Faulo/slothsoft-farah/tree/1.1.3"
+                "source": "https://github.com/Faulo/slothsoft-farah/tree/1.2.0"
             },
-            "time": "2020-12-26T17:37:16+00:00"
+            "time": "2020-12-26T20:38:39+00:00"
         },
         {
             "name": "slothsoft/w3c",
