@@ -10,7 +10,7 @@
 			<page name="header" ref="/static/header" status-active="" />
 			<page name="downloads" redirect=".." status-active="" >
 				<xsl:for-each select="*[@name = 'downloads']//sfm:manifest-info">
-					<page name="{@name}" ref="{@url}" status-active="" />
+					<file name="{@name}" ref="{@url}" status-active="" />
 				</xsl:for-each>
 			</page>
 			<page name="sitemap" ref="//slothsoft@farah/sitemap-generator" status-active="" />
