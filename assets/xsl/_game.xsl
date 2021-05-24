@@ -188,12 +188,14 @@
 								<xsl:when test="$trailers">
 									<xsl:for-each select="$trailers">
 										<p>
-											<strong><xsl:value-of select="name"/></strong>
+											<strong>
+												<xsl:value-of select="name" />
+											</strong>
 											<xsl:text> </xsl:text>
 											<a href="https://www.youtube.com/watch?v={youtube}" rel="external" target="_blank">YouTube</a>
 										</p>
 										<div class="uk-responsive-width iframe-container">
-											<iframe src="https://www.youtube.com/embed/{youtube}" allowfullscreen="" frameborder="0"/>					
+											<iframe src="https://www.youtube.com/embed/{youtube}" allowfullscreen="" frameborder="0" />
 										</div>
 									</xsl:for-each>
 								</xsl:when>
