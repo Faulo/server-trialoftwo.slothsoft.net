@@ -10,13 +10,14 @@
 
 	<directory name="sitemap">
 		<resource use="template" name="template" type="application/xslt+xml" />
+		<use-document ref="/static/downloads" name="downloads" />
 	</directory>
 
 	<directory name="static">
 		<resource-directory name="images" path="images" type="image/*" />
 		<resource-directory name="logos" path="logos" type="image/*" />
 		<resource-directory name="trailers" path="videos" type="video/*" />
-		<resource-directory name="downloads" path="downloads" type="video/*" />
+		<resource-directory name="downloads" path="downloads" type="*/*" />
 
 		<resource name="favicon" path="Oilcatz_Light_Icon_Small.png" type="image/png" />
 		<resource name="logo" path="Oilcatz_Light_Splash_Large.png" type="image/png" />
