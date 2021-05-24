@@ -2,7 +2,7 @@
 
 <game xmlns:html="http://www.w3.org/1999/xhtml">
 	<title>Trial of Two: The Dojo</title>
-	<release-date>March 2021</release-date>
+	<release-date>2021</release-date>
 	<website>http://trialoftwo.slothsoft.net</website>
 	<press-can-request-copy>TRUE</press-can-request-copy>
 
@@ -188,6 +188,27 @@
 		</thank>
 		<thank>
 			<person>Annika Andrzejewska</person>
+		</thank>
+		<thank>
+			<person>Carl-Philipp Hellmuth</person>
+		</thank>
+		<thank>
+			<person>Miriam Kraus</person>
+		</thank>
+		<thank>
+			<person>Sebastian Kühn</person>
+		</thank>
+		<thank>
+			<person>Rose-Leonie Lachner</person>
+		</thank>
+		<thank>
+			<person>Theresa Wolfrum</person>
+		</thank>
+		<thank>
+			<person>Robert Ruchay</person>
+		</thank>
+		<thank>
+			<person>Frank Lerke</person>
 		</thank>
 	</thanks>
 </game>
