@@ -3,12 +3,16 @@
 <game xmlns:html="http://www.w3.org/1999/xhtml">
 	<title>Trial of Two: The Dojo</title>
 	<release-date>2021</release-date>
-	<website>https://store.steampowered.com/app/1580040/Trial_of_Two/</website>
+	<website>http://trialoftwo.slothsoft.net</website>
 	<press-can-request-copy>TRUE</press-can-request-copy>
 
 	<platforms>
-		<!-- <platform> <name>PC / Mac</name> <link>http://www.gamesite.com/</link> </platform> <platform> <name>Steam</name> <link>http://www.steampowered.com/</link> 
-			</platform> <platform> <name>Apple App Store</name> <link>http://www.itunes.com/</link> </platform> -->
+		<!-- <platform> <name>PC / Mac</name> <link>http://www.gamesite.com/</link> </platform>-->
+		<platform>
+			<name>Steam</name>
+			<link>https://store.steampowered.com/app/1580040/Trial_of_Two/</link>
+		</platform>
+		<!-- <platform> <name>Apple App Store</name> <link>http://www.itunes.com/</link> </platform> -->
 	</platforms>
 
 	<prices>
