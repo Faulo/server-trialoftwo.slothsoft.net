@@ -4,7 +4,7 @@
 <game xmlns:html="http://www.w3.org/1999/xhtml">
 	<title>Oilcatz</title>
 	<founding-date>October 28, 2019</founding-date>
-	<website>http://trialoftwo.slothsoft.net/</website>
+	<website>https://store.steampowered.com/app/1580040/Trial_of_Two/</website>
 	<based-in>Bayreuth, Germany</based-in>
 
 	<press-contact>info.slothsoft@gmail.com</press-contact>
@@ -21,7 +21,7 @@
 	</socials>
 
 	<description>
-		<html:p>We’re a team of 4 students from Germany currently working on our graduation project <html:em>Trial of Two: The Dojo</html:em>. Our goal is to release the game in <s>March</s> late 2021.</html:p>
+		<html:p>We’re a team of 4 students from Germany currently working on our graduation project <html:em>Trial of Two: The Dojo</html:em>. Our goal is to release the game in <html:s>March</html:s> late 2021.</html:p>
 	</description>
 
 	<histories>
