@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:sfs="http://schema.slothsoft.net/farah/sitemap" xmlns:html="http://www.w3.org/1999/xhtml"
-	xmlns:svg="http://www.w3.org/2000/svg" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	xmlns:svg="http://www.w3.org/2000/svg" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:date="http://exslt.org/dates-and-times"
+	xmlns:php="http://php.net/xsl"
+    extension-element-prefixes="php date">
 
 	<xsl:variable name="company" select="/*/*[@name='company']/game" />
 	<xsl:variable name="game" select="/*/*[@name='game']/game" />
@@ -24,13 +27,13 @@
 	<xsl:template match="/*">
 		<xsl:variable name="requestedPage" select="*[@name='sites']//*[@current]" />
 		<xsl:variable name="tournament" select="document(*[@name='tournaments']/*/*[@name=$requestedPage/@name]/@url)/*" />
+		<xsl:variable name="date" select="php:function('strtotime', string($tournament/date))"/>
+		<xsl:variable name="date-string" select="php:function('date', 'd.m.Y', $date)"/>
 		<xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
-		<html>
+		<html class="tournament">
 			<head>
 				<title>
-					<xsl:value-of select="$tournament/date" />
-					-
-					<xsl:value-of select="$tournament/event" />
+					Trial of Two Turnier - <xsl:value-of select="$date-string" />
 				</title>
 
 				<meta charset="utf-8" />
@@ -40,10 +43,36 @@
 				<link rel="icon" type="image/png" href="/favicon.ico/" />
 			</head>
 
-			<body class="tournament">
-				<h1>Trial of Two Turnier</h1>
-				<h2><xsl:value-of select="$tournament/date"/></h2>
-				<h2><xsl:value-of select="$tournament/time"/></h2>
+			<body>
+				<header>
+					<img class="header" src="/header/" alt="Trial of TWo"/>
+				</header>
+				<main>
+					<h1 class="fvriosa"><xsl:value-of select="$tournament/name"/></h1>
+					<h2 class="fvriosa">
+						<time datetime="{php:function('date', 'Y-m-d\TH:i:sP', $date)}"><xsl:value-of select="$date-string"/></time>
+						<br/>
+						<xsl:value-of select="$tournament/time"/>
+					</h2>
+					<ul class="infos">
+						<li>
+							<h2 class="fvriosa">Location</h2>
+							<iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q={translate($tournament/address, ' ', '+')}" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"/>
+						</li>
+						<li>
+							<h2 class="fvriosa">Format</h2>
+							<xsl:copy-of select="$tournament/format/node()"/>
+						</li>
+						<li>
+							<h2 class="fvriosa">Spiel</h2>
+							<iframe src="https://store.steampowered.com/widget/1736050/" frameborder="0" width="600" height="200"/>
+						</li>
+						<li>
+							<h2 class="fvriosa">Anmelden</h2>
+							<xsl:copy-of select="$tournament/registration/node()"/>
+						</li>
+					</ul>
+				</main>
 			</body>
 		</html>
 	</xsl:template>

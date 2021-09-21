@@ -81,21 +81,76 @@ img {
 	background-image: url("/tournament-background/");
 	background-repeat: no-repeat;
 	background-size: cover;
+	min-height: 100vh;
+}
+.tournament body {
+	font-size: 18pt;
 }
 .tournament h1,
 .tournament h2,
 .tournament h3 {
-	text-align: center;
-	color: white;
-	text-shadow: 2px 2px 0px black, 0px 0px 1px black;
-	margin: 2em;
+	margin: 0;
 }
 .tournament h1 {
-	font-size: 4em;
+	font-size: 2.25em;
+	text-align: center;
 }
 .tournament h2 {
-	font-size: 3em;
+	font-size: 1.5em;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+	text-align: center;
 }	
 .tournament h3 {
-	font-size: 2em;
+	font-size: 1em;
+	margin-top: 1em;
+}
+.tournament p {
+	margin: 0;
+}
+.fvriosa {
+	font-family: myFvriosa, sans-serif;
+	color: white;
+	text-shadow: 0.05em 0.05em 0 black, 0.05em 0.05em 0.1em black, 0 0 0.1em black;
+	line-height: 1.5em;
+}
+.smudge {
+	font-family: mySmudgeStick, sans-serif;
+	color: white;
+	text-shadow: 0.05em 0.05em 0 black, 0.05em 0.05em 0.1em black, 0 0 0.1em black;
+	line-height: 1.2em;
+}
+.tournament header img {
+	display: block;
+	width: 50ch;
+	max-width: 90vw;
+	margin: auto;
+}
+ul.infos {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: stretch;
+	padding: 0;
+	margin:0;
+}
+ul.infos > li {
+	display: block;
+	width: 600px;
+	padding: 0;
+	margin:0 10px;
+}
+.tournament :link {
+	color: #eef;
+}
+.tournament :visited {
+	color: #fef;
+}
+@font-face {
+	font-family: myFvriosa;
+	src: local("Fvriosa"), url(/oilcatz@trialoftwo.slothsoft.net/static/fonts/Fvriosa);
+}
+@font-face {
+	font-family: mySmudgeStick;
+	src: local("SmudgeStick"), url(/oilcatz@trialoftwo.slothsoft.net/static/fonts/SmudgeStick);
 }

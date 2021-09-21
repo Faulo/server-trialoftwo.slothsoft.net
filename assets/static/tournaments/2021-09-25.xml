@@ -2,6 +2,24 @@
 <tournament>
 	<date>2021-09-25</date>
 	<time>15:00-17:00</time>
+	<name>Turnier</name>
 	<event>Macht Spiele!</event>
 	<address>Maximilianstraße 62, 95444 Bayreuth</address>
+	<format>
+		<div xmlns="http://www.w3.org/1999/xhtml" class="smudge">
+			<p>Alle Matches sind 1 gegen 1, Best-of-Three, mit 90 Sekunden Zeitlimit pro Spiel.</p>
+			<p>Die Turnierform entscheidet sich nach der Anzahl der Anmeldungen:</p>
+			<h3>Bis zu 12 Anmeldungen:</h3>
+			<p>Zuerst 2 Runden im Schweizer System, danach Cut zu Top 4 im K.O.-System.</p>
+			<h3>Ab 13 Anmeldungen:</h3>
+			<p>Alle Matches werden im K.O.-System ausgetragen.</p>
+		</div>
+	</format>
+	<registration>
+		<div xmlns="http://www.w3.org/1999/xhtml" class="smudge">
+			<p>Für das Turnier anmelden kann man sich sowohl direkt an unserem Stand als auch über unseren Discord-Server:</p>
+			<iframe src="https://discord.com/widget?id=839103145799974972&amp;theme=dark" width="600" height="200" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"/>
+			<p>Anmeldeschluss ist Samstag 14:45.</p>			
+		</div>
+	</registration>
 </tournament>

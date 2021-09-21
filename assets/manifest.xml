@@ -24,13 +24,15 @@
 		<resource name="favicon" path="Oilcatz_Light_Icon_Small.png" type="image/png" />
 		<resource name="logo" path="Oilcatz_Light_Splash_Large.png" type="image/png" />
 		<resource name="header" path="Logo_ToT_Dudeful_LeftRight.png" type="image/png" />
-		<resource name="tournament-background" path="images/2021-06-03 15-26-43.png" type="image/png" />
+		<resource name="tournament-background" path="tournament-background.png" type="image/png" />
+      <resource-directory name="fonts" path="fonts" type="application/font-sfnt"/>
 	</directory>
 
 	<fragment name="pages">
 		<fragment name="company">
 			<use-template ref="/xsl/_company" />
 			<import ref="/api/default" />
+			<import ref="/api/uikit" />
 			<use-document ref="/company" name="company" />
 			<use-document ref="/game" name="game" />
 			<use-document ref="/static/images" name="images" />
@@ -39,6 +41,7 @@
 		<fragment name="game">
 			<use-template ref="/xsl/_game" />
 			<import ref="/api/default" />
+			<import ref="/api/uikit" />
 			<use-document ref="/company" name="company" />
 			<use-document ref="/game" name="game" />
 			<use-document ref="/static/images" name="images" />
@@ -58,7 +61,6 @@
 	<fragment name="api">
 		<fragment name="default">
 			<use-document ref="//slothsoft@farah/sites" name="sites" />
-			<import ref="/api/uikit" />
 			<link-stylesheet ref="/css/style" />
 		</fragment>
 		<fragment name="uikit">
