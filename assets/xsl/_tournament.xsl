@@ -56,7 +56,7 @@ window.addEventListener("load", handleResize, false);
 
 			<body>
 				<header>
-					<img class="header" src="/header/" alt="Trial of TWo"/>
+					<img class="header" src="/header" alt="Trial of TWo"/>
 				</header>
 				<main>
 					<h1 class="fvriosa"><xsl:value-of select="$tournament/name"/></h1>
@@ -84,6 +84,9 @@ window.addEventListener("load", handleResize, false);
 						</li>
 					</ul>
 				</main>
+				<footer>
+					<a href="/"><img src="/logo-text"/></a>
+				</footer>
 			</body>
 		</html>
 	</xsl:template>

@@ -6,9 +6,11 @@
 		<domain name="trialoftwo.slothsoft.net" vendor="oilcatz" module="trialoftwo.slothsoft.net" ref="pages/game"
 			status-active="" status-public="" sfd:languages="en-us">
 			<page name="Oilcatz" ref="pages/company" status-active="" status-public="" />
-			<page name="favicon.ico" ref="/static/favicon" status-active="" />
-			<page name="header" ref="/static/header" status-active="" />
-			<page name="tournament-background" ref="/static/tournament-background" status-active="" />
+			<file name="favicon.ico" ref="/static/favicon" status-active="" />
+			<file name="header" ref="/static/header" status-active="" />
+			<file name="logo" ref="/static/logo" status-active="" />
+			<file name="logo-text" ref="/static/logo-text" status-active="" />
+			<file name="tournament-background" ref="/static/tournament-background" status-active="" />
 			<page name="downloads" redirect=".." status-active="">
 				<xsl:for-each select="*[@name = 'downloads']//sfm:manifest-info">
 					<file name="{@name}" ref="{@url}" status-active="" />

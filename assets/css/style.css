@@ -122,11 +122,15 @@ img {
 	text-shadow: 0.05em 0.05em 0 black, 0.05em 0.05em 0.1em black, 0 0 0.1em black;
 	line-height: 1.1em;
 }
-.tournament header img {
+.tournament header img,
+.tournament footer img {
 	display: block;
-	width: 50ch;
+	width: 60ch;
 	max-width: 90vw;
 	margin: auto;
+}
+.tournament footer {
+	margin-top: 2em;
 }
 ul.infos {
 	display: flex;
@@ -153,7 +157,7 @@ ul.infos > li {
 	background-color: rgba(0, 0, 0, 0.3);
 	padding: 0.5em;
 }
-a img {
+.tournament main a img {
 	display: inline-block;
 	height: 1.5em;
 	width: auto;
