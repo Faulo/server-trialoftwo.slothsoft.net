@@ -57,7 +57,7 @@
 					<ul class="infos">
 						<li>
 							<h2 class="fvriosa">Location</h2>
-							<iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q={translate($tournament/address, ' ', '+')}" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"/>
+							<iframe src="{$tournament/googlemap}" width="600" height="500" frameborder="0" scrolling="no"/>
 						</li>
 						<li>
 							<h2 class="fvriosa">Format</h2>
@@ -68,7 +68,7 @@
 							<iframe src="https://store.steampowered.com/widget/1736050/" frameborder="0" width="600" height="200"/>
 						</li>
 						<li>
-							<h2 class="fvriosa">Anmelden</h2>
+							<h2 class="fvriosa">Anmeldung</h2>
 							<xsl:copy-of select="$tournament/registration/node()"/>
 						</li>
 					</ul>

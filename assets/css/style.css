@@ -106,7 +106,7 @@ img {
 	margin-top: 1em;
 }
 .tournament p {
-	margin: 0;
+	margin: 0 0 0.25em 0;
 }
 .fvriosa {
 	font-family: myFvriosa, sans-serif;
@@ -118,7 +118,7 @@ img {
 	font-family: mySmudgeStick, sans-serif;
 	color: white;
 	text-shadow: 0.05em 0.05em 0 black, 0.05em 0.05em 0.1em black, 0 0 0.1em black;
-	line-height: 1.2em;
+	line-height: 1.1em;
 }
 .tournament header img {
 	display: block;
@@ -141,10 +141,21 @@ ul.infos > li {
 	margin:0 10px;
 }
 .tournament :link {
-	color: #eef;
+	color: #e0e0ff;
 }
 .tournament :visited {
-	color: #fef;
+	color: #e8e0ff;
+}
+.tournament .box {
+	background-color: rgba(0, 0, 0, 0.3);
+	padding: 0.5em;
+}
+a img {
+	display: inline-block;
+	height: 1.5em;
+	width: auto;
+	margin: 0 0.25em;
+	vertical-align: bottom;
 }
 @font-face {
 	font-family: myFvriosa;
