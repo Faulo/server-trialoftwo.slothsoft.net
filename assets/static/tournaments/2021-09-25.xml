@@ -11,17 +11,26 @@
 			<p>Alle Matches sind 1 gegen 1, Best-of-Three, mit 90 Sekunden Zeitlimit pro Spiel.</p>
 			<p>Die Turnierform entscheidet sich nach der Anzahl der Anmeldungen:</p>
 			<h3>Bis zu 12 Anmeldungen:</h3>
-			<p>Zuerst 2 Runden im Schweizer System, danach Cut zu Top 4 im K.O.-System.</p>
+			<p>Zuerst 2 Runden im Schweizer System, danach Cut zu Top 4 im Single-Elimination K.O.-System.</p>
 			<h3>Ab 13 Anmeldungen:</h3>
-			<p>Alle Matches werden im K.O.-System ausgetragen.</p>
+			<p>Alle Matches werden im Single-Elimination K.O.-System ausgetragen.</p>
 		</div>
 	</format>
 	<registration>
 		<div xmlns="http://www.w3.org/1999/xhtml" class="smudge box">
-			<p>Für das Turnier anmelden kann man sich sowohl direkt an unserem Stand auf der Maximilianstraße als auch über unseren Discord-Server:</p>
+			<p>Für das Turnier voranmelden kann man sich sowohl direkt an unserem Stand auf der Maximilianstraße als auch über unseren Discord-Server:</p>
 			<a target="_blank" rel="external" href="https://discord.gg/BBmgcHcu4E"><img src="/favicon.ico" alt="Logo"/>Oilcatz Discord-Server</a>
 			<br/>
-			<p>Anmeldeschluss ist Samstag um 14:45.</p>			
+			<p>Anmeldeschluss ist Samstag (25.09.) um 14:45.</p>
+			<p>15:00 beginnt dann das 1. Match!</p>
 		</div>
 	</registration>
+	<!--
+	<prizes>
+		<div xmlns="http://www.w3.org/1999/xhtml" class="smudge box">
+			<p>Der Sieger oder die Siegerin bekommt 1 Trial of Two T-Shirt!</p>
+			<p>Alle anderen Teilnehmenden erhalten einen kleinen Haribo-Trostpreis.</p>			
+		</div>
+	</prizes>
+	-->
 </tournament>

@@ -68,7 +68,7 @@ window.addEventListener("load", handleResize, false);
 					<ul class="infos">
 						<li>
 							<h2 class="fvriosa">Location</h2>
-							<iframe src="{$tournament/googlemap}" width="600" height="500" frameborder="0" scrolling="no"/>
+							<iframe src="{$tournament/googlemap}" width="600" height="350" frameborder="0" scrolling="no"/>
 						</li>
 						<li>
 							<h2 class="fvriosa">Format</h2>
@@ -82,6 +82,12 @@ window.addEventListener("load", handleResize, false);
 							<h2 class="fvriosa">Anmeldung</h2>
 							<xsl:copy-of select="$tournament/registration/node()"/>
 						</li>
+						<xsl:if test="$tournament/prizes">
+							<li>
+								<h2 class="fvriosa">Preise</h2>
+								<xsl:copy-of select="$tournament/prizes/node()"/>
+							</li>
+						</xsl:if>
 					</ul>
 				</main>
 				<footer>
