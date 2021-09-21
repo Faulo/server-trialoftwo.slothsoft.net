@@ -2,9 +2,7 @@
 <xsl:stylesheet version="1.0" xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:sfs="http://schema.slothsoft.net/farah/sitemap" xmlns:html="http://www.w3.org/1999/xhtml"
 	xmlns:svg="http://www.w3.org/2000/svg" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-	xmlns:date="http://exslt.org/dates-and-times"
-	xmlns:php="http://php.net/xsl"
-    extension-element-prefixes="php date">
+	xmlns:date="http://exslt.org/dates-and-times" xmlns:php="http://php.net/xsl" extension-element-prefixes="php date">
 
 	<xsl:variable name="company" select="/*/*[@name='company']/game" />
 	<xsl:variable name="game" select="/*/*[@name='game']/game" />
@@ -26,14 +24,16 @@
 
 	<xsl:template match="/*">
 		<xsl:variable name="requestedPage" select="*[@name='sites']//*[@current]" />
-		<xsl:variable name="tournament" select="document(*[@name='tournaments']/*/*[@name=$requestedPage/@name]/@url)/*" />
-		<xsl:variable name="date" select="php:function('strtotime', string($tournament/date))"/>
-		<xsl:variable name="date-string" select="php:function('date', 'd.m.Y', $date)"/>
+		<xsl:variable name="tournament"
+			select="document(*[@name='tournaments']/*/*[@name=$requestedPage/@name]/@url)/*" />
+		<xsl:variable name="date" select="php:function('strtotime', string($tournament/date))" />
+		<xsl:variable name="date-string" select="php:function('date', 'd.m.Y', $date)" />
 		<xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
 		<html class="tournament">
 			<head>
 				<title>
-					Trial of Two Turnier - <xsl:value-of select="$date-string" />
+					Trial of Two Turnier -
+					<xsl:value-of select="$date-string" />
 				</title>
 
 				<meta charset="utf-8" />
@@ -41,7 +41,7 @@
 
 
 				<link rel="icon" type="image/png" href="/favicon.ico/" />
-				
+
 				<script type="application/javascript"><![CDATA[
 function handleResize(eve) {
 	var iframes = document.querySelectorAll("iframe");
@@ -56,42 +56,48 @@ window.addEventListener("load", handleResize, false);
 
 			<body>
 				<header>
-					<img class="header" src="/header" alt="Trial of TWo"/>
+					<img class="header" src="/header" alt="Trial of Two" />
 				</header>
 				<main>
-					<h1 class="fvriosa"><xsl:value-of select="$tournament/name"/></h1>
+					<h1 class="fvriosa">
+						<xsl:value-of select="$tournament/name" />
+					</h1>
 					<h2 class="fvriosa">
-						<time datetime="{php:function('date', 'Y-m-d\TH:i:sP', $date)}"><xsl:value-of select="$date-string"/></time>
-						<br/>
-						<xsl:value-of select="$tournament/time"/>
+						<time datetime="{php:function('date', 'Y-m-d\TH:i:sP', $date)}">
+							<xsl:value-of select="$date-string" />
+						</time>
+						<br />
+						<xsl:value-of select="$tournament/time" />
 					</h2>
 					<ul class="infos">
 						<li>
 							<h2 class="fvriosa">Location</h2>
-							<iframe src="{$tournament/googlemap}" width="600" height="350" frameborder="0" scrolling="no"/>
+							<iframe src="{$tournament/googlemap}" width="600" height="350" frameborder="0" scrolling="no" />
 						</li>
 						<li>
 							<h2 class="fvriosa">Format</h2>
-							<xsl:copy-of select="$tournament/format/node()"/>
+							<xsl:copy-of select="$tournament/format/node()" />
 						</li>
 						<li>
 							<h2 class="fvriosa">Spiel</h2>
-							<iframe src="https://store.steampowered.com/widget/1736050/" frameborder="0" width="600" height="200"/>
+							<iframe src="https://store.steampowered.com/widget/1736050/" frameborder="0" width="600" height="200" />
 						</li>
 						<li>
 							<h2 class="fvriosa">Anmeldung</h2>
-							<xsl:copy-of select="$tournament/registration/node()"/>
+							<xsl:copy-of select="$tournament/registration/node()" />
 						</li>
 						<xsl:if test="$tournament/prizes">
 							<li>
 								<h2 class="fvriosa">Preise</h2>
-								<xsl:copy-of select="$tournament/prizes/node()"/>
+								<xsl:copy-of select="$tournament/prizes/node()" />
 							</li>
 						</xsl:if>
 					</ul>
 				</main>
 				<footer>
-					<a href="/"><img src="/logo-text"/></a>
+					<a href="/">
+						<img src="/logo-text" alt="Oilcatz"/>
+					</a>
 				</footer>
 			</body>
 		</html>

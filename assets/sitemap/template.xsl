@@ -18,7 +18,7 @@
 			</page>
 			<page name="Tournament" redirect=".." status-active="">
 				<xsl:for-each select="*[@name = 'tournaments']//sfm:manifest-info">
-					<page name="{@name}" ref="pages/tournament?id={@name}" status-active=""  status-public=""/>
+					<page name="{@name}" ref="pages/tournament?id={@name}" status-active="" status-public="" />
 				</xsl:for-each>
 			</page>
 			<page name="sitemap" ref="//slothsoft@farah/sitemap-generator" status-active="" />

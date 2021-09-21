@@ -18,19 +18,17 @@
 	</format>
 	<registration>
 		<div xmlns="http://www.w3.org/1999/xhtml" class="smudge box">
-			<p>Für das Turnier voranmelden kann man sich sowohl direkt an unserem Stand auf der Maximilianstraße als auch über unseren Discord-Server:</p>
-			<a target="_blank" rel="external" href="https://discord.gg/BBmgcHcu4E"><img src="/favicon.ico" alt="Logo"/>Oilcatz Discord-Server</a>
-			<br/>
+			<p>Für das Turnier voranmelden kann man sich sowohl direkt an unserem Stand auf der Maximilianstraße als auch über
+				unseren Discord-Server:</p>
+			<a target="_blank" rel="external" href="https://discord.gg/BBmgcHcu4E">
+				<img src="/favicon.ico" alt="Logo" />
+				Oilcatz Discord-Server
+			</a>
+			<br />
 			<p>Anmeldeschluss ist Samstag (25.09.) um 14:45.</p>
 			<p>15:00 beginnt dann das 1. Match!</p>
 		</div>
 	</registration>
-	<!--
-	<prizes>
-		<div xmlns="http://www.w3.org/1999/xhtml" class="smudge box">
-			<p>Der Sieger oder die Siegerin bekommt 1 Trial of Two T-Shirt!</p>
-			<p>Alle anderen Teilnehmenden erhalten einen kleinen Haribo-Trostpreis.</p>			
-		</div>
-	</prizes>
-	-->
+	<!-- <prizes> <div xmlns="http://www.w3.org/1999/xhtml" class="smudge box"> <p>Der Sieger oder die Siegerin bekommt 1 Trial 
+		of Two T-Shirt!</p> <p>Alle anderen Teilnehmenden erhalten einen kleinen Haribo-Trostpreis.</p> </div> </prizes> -->
 </tournament>

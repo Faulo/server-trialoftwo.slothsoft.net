@@ -26,7 +26,7 @@
 		<resource name="logo-text" path="Oilcatz_Light_Text_Medium.png" type="image/png" />
 		<resource name="header" path="Logo_ToT_Dudeful_LeftRight.png" type="image/png" />
 		<resource name="tournament-background" path="tournament-background.jpg" type="image/png" />
-      <resource-directory name="fonts" path="fonts" type="application/font-sfnt"/>
+		<resource-directory name="fonts" path="fonts" type="application/font-sfnt" />
 	</directory>
 
 	<fragment name="pages">
@@ -55,7 +55,7 @@
 			<use-document ref="/game" name="game" />
 			<use-document ref="/static/images" name="images" />
 			<use-document ref="/static/logos" name="logos" />
-			<use-document ref="/static/tournaments" name="tournaments"/>
+			<use-document ref="/static/tournaments" name="tournaments" />
 		</fragment>
 	</fragment>
 
