@@ -8,9 +8,15 @@
 			<page name="Oilcatz" ref="pages/company" status-active="" status-public="" />
 			<page name="favicon.ico" ref="/static/favicon" status-active="" />
 			<page name="header" ref="/static/header" status-active="" />
+			<page name="tournament-background" ref="/static/tournament-background" status-active="" />
 			<page name="downloads" redirect=".." status-active="">
 				<xsl:for-each select="*[@name = 'downloads']//sfm:manifest-info">
 					<file name="{@name}" ref="{@url}" status-active="" />
+				</xsl:for-each>
+			</page>
+			<page name="Tournament" redirect=".." status-active="">
+				<xsl:for-each select="*[@name = 'tournaments']//sfm:manifest-info">
+					<page name="{@name}" ref="pages/tournament?id={@name}" status-active=""  status-public=""/>
 				</xsl:for-each>
 			</page>
 			<page name="sitemap" ref="//slothsoft@farah/sitemap-generator" status-active="" />

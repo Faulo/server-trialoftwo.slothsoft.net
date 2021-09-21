@@ -76,3 +76,26 @@ img {
 		margin-top: 25px;
 	}
 }
+
+.tournament {
+	background-image: url("/tournament-background/");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.tournament h1,
+.tournament h2,
+.tournament h3 {
+	text-align: center;
+	color: white;
+	text-shadow: 2px 2px 0px black, 0px 0px 1px black;
+	margin: 2em;
+}
+.tournament h1 {
+	font-size: 4em;
+}
+.tournament h2 {
+	font-size: 3em;
+}	
+.tournament h3 {
+	font-size: 2em;
+}

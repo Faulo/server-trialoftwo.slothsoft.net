@@ -11,6 +11,7 @@
 	<directory name="sitemap">
 		<resource use="template" name="template" type="application/xslt+xml" />
 		<use-document ref="/static/downloads" name="downloads" />
+		<use-document ref="/static/tournaments" name="tournaments" />
 	</directory>
 
 	<directory name="static">
@@ -18,10 +19,12 @@
 		<resource-directory name="logos" path="logos" type="image/*" />
 		<resource-directory name="trailers" path="videos" type="video/*" />
 		<resource-directory name="downloads" path="downloads" type="*/*" />
+		<resource-directory name="tournaments" path="tournaments" type="application/xml" />
 
 		<resource name="favicon" path="Oilcatz_Light_Icon_Small.png" type="image/png" />
 		<resource name="logo" path="Oilcatz_Light_Splash_Large.png" type="image/png" />
 		<resource name="header" path="Logo_ToT_Dudeful_LeftRight.png" type="image/png" />
+		<resource name="tournament-background" path="images/2021-06-03 15-26-43.png" type="image/png" />
 	</directory>
 
 	<fragment name="pages">
@@ -40,6 +43,15 @@
 			<use-document ref="/game" name="game" />
 			<use-document ref="/static/images" name="images" />
 			<use-document ref="/static/logos" name="logos" />
+		</fragment>
+		<fragment name="tournament">
+			<use-template ref="/xsl/_tournament" />
+			<import ref="/api/default" />
+			<use-document ref="/company" name="company" />
+			<use-document ref="/game" name="game" />
+			<use-document ref="/static/images" name="images" />
+			<use-document ref="/static/logos" name="logos" />
+			<use-document ref="/static/tournaments" name="tournaments"/>
 		</fragment>
 	</fragment>
 
