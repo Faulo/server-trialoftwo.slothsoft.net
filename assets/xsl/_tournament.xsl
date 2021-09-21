@@ -41,6 +41,17 @@
 
 
 				<link rel="icon" type="image/png" href="/favicon.ico/" />
+				
+				<script type="application/javascript"><![CDATA[
+function handleResize(eve) {
+	var iframes = document.querySelectorAll("iframe");
+	for(var i = 0; i < iframes.length; i++) {
+		iframes[i].width = Math.min(600, document.documentElement.clientWidth);
+	}
+}
+window.addEventListener("resize", handleResize, false);
+window.addEventListener("load", handleResize, false);
+				]]></script>
 			</head>
 
 			<body>
