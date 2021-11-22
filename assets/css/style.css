@@ -105,7 +105,8 @@ img {
 }	
 .tournament h3 {
 	font-size: 1em;
-	margin-top: 1em;
+	margin-top: 0.5em;
+	text-align: center;
 }
 .tournament p {
 	margin: 0 0 0.25em 0;

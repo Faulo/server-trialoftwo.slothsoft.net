@@ -59,16 +59,19 @@ window.addEventListener("load", handleResize, false);
 					<img class="header" src="/header" alt="Trial of Two" />
 				</header>
 				<main>
-					<h1 class="fvriosa">
-						<xsl:value-of select="$tournament/name" />
-					</h1>
-					<h2 class="fvriosa">
-						<time datetime="{php:function('date', 'Y-m-d\TH:i:sP', $date)}">
-							<xsl:value-of select="$date-string" />
-						</time>
-						<br />
-						<xsl:value-of select="$tournament/time" />
-					</h2>
+					<hgroup>
+						<h1 class="fvriosa">
+							<xsl:value-of select="$tournament/name" />
+						</h1>
+						<h3 class="smudge"><xsl:value-of select="$tournament/event" /></h3>
+						<h2 class="fvriosa">
+							<time datetime="{php:function('date', 'Y-m-d\TH:i:sP', $date)}">
+								<xsl:value-of select="$date-string" />
+							</time>
+							<br />
+							<xsl:value-of select="$tournament/time" />
+						</h2>
+					</hgroup>
 					<ul class="infos">
 						<li>
 							<h2 class="fvriosa">Location</h2>
