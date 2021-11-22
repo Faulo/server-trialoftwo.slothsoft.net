@@ -106,6 +106,8 @@ img {
 .tournament h3 {
 	font-size: 1em;
 	margin-top: 0.5em;
+}
+.tournament group h3 {
 	text-align: center;
 }
 .tournament p {
