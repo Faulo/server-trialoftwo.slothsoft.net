@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "528573eb513454f739841730125c6bc2",
+    "content-hash": "598e26690eeff55fb5228019468c37ac",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -1297,16 +1297,16 @@
         },
         {
             "name": "slothsoft/core",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-core.git",
-                "reference": "83baae5ca10feed572d9e8d3dbbd355d4e53cbaf"
+                "reference": "96c6dc60f2767561e2aeb6de9927a0070a96f524"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-core/zipball/83baae5ca10feed572d9e8d3dbbd355d4e53cbaf",
-                "reference": "83baae5ca10feed572d9e8d3dbbd355d4e53cbaf",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-core/zipball/96c6dc60f2767561e2aeb6de9927a0070a96f524",
+                "reference": "96c6dc60f2767561e2aeb6de9927a0070a96f524",
                 "shasum": ""
             },
             "require": {
@@ -1328,7 +1328,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-develop": "1.4.x-dev"
+                    "dev-develop": "1.5.x-dev"
                 }
             },
             "autoload": {
@@ -1357,9 +1357,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-core/issues",
-                "source": "https://github.com/Faulo/slothsoft-core/tree/1.4.0"
+                "source": "https://github.com/Faulo/slothsoft-core/tree/1.5.0"
             },
-            "time": "2022-01-04T23:03:04+00:00"
+            "time": "2022-01-18T17:09:40+00:00"
         },
         {
             "name": "slothsoft/farah",
@@ -1723,9 +1723,6 @@
             },
             "require": {
                 "php": "^7.1 || ^8.0"
-            },
-            "replace": {
-                "myclabs/deep-copy": "self.version"
             },
             "require-dev": {
                 "doctrine/collections": "^1.0",
@@ -2402,16 +2399,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "8.5.22",
+            "version": "8.5.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "ddd05b9d844260353895a3b950a9258126c11503"
+                "reference": "efb20ff3623b9d09bf190a68fdfe574538a8d496"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/ddd05b9d844260353895a3b950a9258126c11503",
-                "reference": "ddd05b9d844260353895a3b950a9258126c11503",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/efb20ff3623b9d09bf190a68fdfe574538a8d496",
+                "reference": "efb20ff3623b9d09bf190a68fdfe574538a8d496",
                 "shasum": ""
             },
             "require": {
@@ -2483,7 +2480,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/8.5.22"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/8.5.23"
             },
             "funding": [
                 {
@@ -2495,7 +2492,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-12-25T06:58:09+00:00"
+            "time": "2022-01-21T05:50:34+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -3426,5 +3423,5 @@
         "php": "7.2 - 8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.2.0"
 }
