@@ -7,12 +7,12 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-				bat '$PHP composer.phar install --ignore-platform-reqs --dev --no-interaction --no-progress'
+				bat "$PHP composer.phar install --ignore-platform-reqs --no-interaction --no-progress"
             }
         }
         stage('Test') { 
             steps {
-				bat '$PHP vendor\\bin\\phpunit --log-junit phpunit.results.xml'
+				bat "$PHP vendor/phpunit/phpunit/phpunit --log-junit phpunit.results.xml"
 			}
         }
     }
