@@ -2,7 +2,7 @@ pipeline {
     agent any
 	environment {
 		PHP_VERSION = "7.4"
-		PHP = "C:\Webserver\php-7.4\php.exe"
+		PHP = "C:\\Webserver\\php-7.4\\php.exe"
 	}
     stages {
         stage('Build') { 
