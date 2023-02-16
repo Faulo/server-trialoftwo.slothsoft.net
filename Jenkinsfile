@@ -1,8 +1,8 @@
 pipeline {
     agent any
 	environment {
-		PHP_VERSION = "7.4"
-		PHP = "C:\\Webserver\\php-7.4\\php.exe"
+		PHP_VERSION = powershell(script:'composer config platform.php', returnStdout: true).trim()
+		PHP = "C:\\Webserver\\php-${env.PHP_VERSION}\\php.exe"
 	}
     stages {
         stage('Build') { 
