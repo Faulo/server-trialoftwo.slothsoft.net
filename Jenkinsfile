@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-				bat 'composer install --ignore-platform-reqs --dev --no-interaction --no-progress --prefer-lowest'
+				bat 'composer install --ignore-platform-reqs --dev --no-interaction --no-progress'
             }
         }
         stage('Test') { 
