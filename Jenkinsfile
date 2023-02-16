@@ -30,9 +30,5 @@ pipeline {
 				publishCoverage adapters: [coberturaAdapter('build/logs/cobertura.xml')]
 			}
         }
-        stage('Deploy') { 
-            steps {
-            }
-        }
     }
 }
