@@ -1,14 +1,18 @@
 pipeline {
-    agent any 
+    agent any
+	environment {
+		PHP_VERSION = "7.4"
+		PHP = "C:\Webserver\php-7.4\php.exe"
+	}
     stages {
         stage('Build') { 
             steps {
-				bat 'composer install --ignore-platform-reqs --dev --no-interaction --no-progress'
+				bat '$PHP composer.phar install --ignore-platform-reqs --dev --no-interaction --no-progress'
             }
         }
         stage('Test') { 
             steps {
-				bat 'vendor\\bin\\phpunit --log-junit phpunit.results.xml'
+				bat '$PHP vendor\\bin\\phpunit --log-junit phpunit.results.xml'
 			}
         }
     }
