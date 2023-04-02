@@ -14,11 +14,11 @@
 			"scripts/bootstrap.php"
 		]
 	},
-	"config": {
-       "platform": {
-           "php": "7.4"
-       }
-    },
+	"config" : {
+		"platform" : {
+			"php" : "7.4"
+		}
+	},
 	"require" : {
 		"php" : "7.4 - 8.0",
 		"slothsoft/core" : "^1.5",
@@ -33,7 +33,7 @@
 		}
 	},
 	"scripts" : {
-		"post-autoload-dump" : "Slothsoft\\Core\\ServerEnvironment::cleanCacheDirectory",
+		"post-update-cmd" : "composer exec server-clean cache",
 		"farah-asset" : "@php vendor/slothsoft/farah/scripts/farah-asset.php",
 		"farah-page" : "@php vendor/slothsoft/farah/scripts/farah-page.php"
 	},
