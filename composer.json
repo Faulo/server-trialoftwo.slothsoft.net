@@ -2,7 +2,7 @@
 	"name" : "oilcatz/trialoftwo.slothsoft.net",
 	"type" : "project",
 	"description" : "trialoftwo.slothsoft.net",
-	"license" : "WTFPL",
+	"license" : "MIT",
 	"keywords" : [
 		"oilcatz",
 		"farah-module",
