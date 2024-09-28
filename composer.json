@@ -10,7 +10,7 @@
 	],
 	"autoload" : {
 		"files" : [
-			"scripts/bootstrap.php"
+			"src/bootstrap.php"
 		]
 	},
 	"require" : {
