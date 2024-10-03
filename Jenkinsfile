@@ -34,7 +34,6 @@ pipeline {
 							def service = "trialoftwo_trialoftwo"
 							sh "docker stack deploy trialoftwo --detach=true --prune --resolve-image=never -c=docker-compose.yml"
 							sh "docker service update --force " + service
-							//sh 'docker exec $(docker ps -q -f name=' + service + ') composer install --no-interaction --no-dev'
 						}
 					}
 				}
