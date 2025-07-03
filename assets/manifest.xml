@@ -8,6 +8,17 @@
 	<resource name="company" type="application/xml" />
 	<resource name="game" type="application/xml" />
 
+	<fragment name="presskit">
+		<fragment name="game">
+			<import ref="//slothsoft@schema/api/presskit-game" />
+			<use-document ref="/company" name="company" />
+			<use-document ref="/game" name="game" />
+			<use-document ref="/static/images" name="images" />
+			<use-document ref="/static/logos" name="logos" />
+			<use-document ref="/static/header" name="header" />
+		</fragment>
+	</fragment>
+
 	<directory name="sitemap">
 		<resource use="template" name="template" type="application/xslt+xml" />
 		<use-document ref="/static/downloads" name="downloads" />
@@ -40,13 +51,9 @@
 			<use-document ref="/static/logos" name="logos" />
 		</fragment>
 		<fragment name="game">
-			<use-template ref="/xsl/_game" />
+			<use-template ref="/xsl/_default" />
 			<import ref="/api/default" />
-			<import ref="/api/uikit" />
-			<use-document ref="/company" name="company" />
-			<use-document ref="/game" name="game" />
-			<use-document ref="/static/images" name="images" />
-			<use-document ref="/static/logos" name="logos" />
+			<use-document ref="/presskit/game" name="content" />
 		</fragment>
 		<fragment name="tournament">
 			<use-template ref="/xsl/_tournament" />

@@ -1,6 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-
-<game xmlns:html="http://www.w3.org/1999/xhtml">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<game xmlns:html="http://www.w3.org/1999/xhtml" xmlns="http://schema.slothsoft.net/schema/presskit" version="1.0">
 	<title>Trial of Two: The Dojo</title>
 	<release-date>2021</release-date>
 	<website>http://trialoftwo.slothsoft.net</website>
@@ -141,7 +140,7 @@
 			<role>Technical Director, Game Designer</role>
 		</credit>
 		<credit>
-			<person>Lena Voß (retired)</person>
+			<person>Lena Voß</person>
 			<website>http://klamueser.de</website>
 			<role>Project Manager</role>
 		</credit>
