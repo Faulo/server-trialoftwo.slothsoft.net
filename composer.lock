@@ -1353,16 +1353,16 @@
         },
         {
             "name": "slothsoft/schema",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-schema.git",
-                "reference": "52aab9201d778703a251256c2a76d7cc09577fc7"
+                "reference": "72b55637c859242d70e885f34ff3781963561312"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-schema/zipball/52aab9201d778703a251256c2a76d7cc09577fc7",
-                "reference": "52aab9201d778703a251256c2a76d7cc09577fc7",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-schema/zipball/72b55637c859242d70e885f34ff3781963561312",
+                "reference": "72b55637c859242d70e885f34ff3781963561312",
                 "shasum": ""
             },
             "require": {
@@ -1406,9 +1406,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-schema/issues",
-                "source": "https://github.com/Faulo/slothsoft-schema/tree/1.2.0"
+                "source": "https://github.com/Faulo/slothsoft-schema/tree/1.2.1"
             },
-            "time": "2025-07-03T16:46:39+00:00"
+            "time": "2025-07-03T16:51:19+00:00"
         },
         {
             "name": "slothsoft/w3c",
