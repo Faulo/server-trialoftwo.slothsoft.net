@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:sfs="http://schema.slothsoft.net/farah/sitemap" xmlns:html="http://www.w3.org/1999/xhtml"
-	xmlns:svg="http://www.w3.org/2000/svg" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-	xmlns:date="http://exslt.org/dates-and-times" xmlns:php="http://php.net/xsl" extension-element-prefixes="php date">
+<xsl:stylesheet version="1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:sfs="http://schema.slothsoft.net/farah/sitemap" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:svg="http://www.w3.org/2000/svg" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:date="http://exslt.org/dates-and-times" xmlns:php="http://php.net/xsl"
+	extension-element-prefixes="php date">
 
 	<xsl:variable name="company" select="/*/*[@name='company']/game" />
 	<xsl:variable name="game" select="/*/*[@name='game']/game" />
@@ -24,8 +23,7 @@
 
 	<xsl:template match="/*">
 		<xsl:variable name="requestedPage" select="*[@name='sites']//*[@current]" />
-		<xsl:variable name="tournament"
-			select="document(*[@name='tournaments']/*/*[@name=$requestedPage/@name]/@url)/*" />
+		<xsl:variable name="tournament" select="document(*[@name='tournaments']/*/*[@name=$requestedPage/@name]/@url)/*" />
 		<xsl:variable name="date" select="php:function('strtotime', string($tournament/date))" />
 		<xsl:variable name="date-string" select="php:function('date', 'd.m.Y', $date)" />
 		<xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
@@ -40,7 +38,7 @@
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 
-				<link rel="icon" type="image/png" href="/favicon.ico/" />
+				<link rel="icon" type="image/png" href="/favicon.ico" />
 
 				<script type="application/javascript"><![CDATA[
 function handleResize(eve) {
@@ -63,7 +61,9 @@ window.addEventListener("load", handleResize, false);
 						<h1 class="fvriosa">
 							<xsl:value-of select="$tournament/name" />
 						</h1>
-						<h3 class="smudge"><xsl:value-of select="$tournament/event" /></h3>
+						<h3 class="smudge">
+							<xsl:value-of select="$tournament/event" />
+						</h3>
 						<h2 class="fvriosa">
 							<time datetime="{php:function('date', 'Y-m-d\TH:i:sP', $date)}">
 								<xsl:value-of select="$date-string" />
@@ -73,10 +73,12 @@ window.addEventListener("load", handleResize, false);
 						</h2>
 					</hgroup>
 					<ul class="infos">
-						<li>
-							<h2 class="fvriosa">Location</h2>
-							<iframe src="{$tournament/googlemap}" width="600" height="350" frameborder="0" scrolling="no" />
-						</li>
+						<xsl:if test="$tournament/googlemap">
+							<li>
+								<h2 class="fvriosa">Location</h2>
+								<iframe src="{$tournament/googlemap}" width="600" height="350" frameborder="0" scrolling="no" />
+							</li>
+						</xsl:if>
 						<li>
 							<h2 class="fvriosa">Format</h2>
 							<xsl:copy-of select="$tournament/format/node()" />
@@ -99,7 +101,7 @@ window.addEventListener("load", handleResize, false);
 				</main>
 				<footer>
 					<a href="/">
-						<img src="/logo-text" alt="Oilcatz"/>
+						<img src="/logo-text" alt="Oilcatz" />
 					</a>
 				</footer>
 			</body>
