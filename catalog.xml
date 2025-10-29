@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <uri name="farah://oilcatz@trialoftwo.slothsoft.net/sitemap/template" uri="assets/sitemap/template.xsl"/>
+  <uri name="farah://oilcatz@trialoftwo.slothsoft.net/xsl/_company" uri="assets/xsl/_company.xsl"/>
+  <uri name="farah://oilcatz@trialoftwo.slothsoft.net/xsl/_default" uri="assets/xsl/_default.xsl"/>
+  <uri name="farah://oilcatz@trialoftwo.slothsoft.net/xsl/_game" uri="assets/xsl/_game.xsl"/>
+  <uri name="farah://oilcatz@trialoftwo.slothsoft.net/xsl/_tournament" uri="assets/xsl/_tournament.xsl"/>
+</catalog>
