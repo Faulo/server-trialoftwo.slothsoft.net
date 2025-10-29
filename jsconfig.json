@@ -2,13 +2,13 @@
   "compilerOptions": {
     "paths": {
       "/oilcatz@trialoftwo.slothsoft.net/*": [
-        "./assets/*"
+        "assets/*"
       ],
       "/slothsoft@farah/*": [
-        "../slothsoft-farah/assets/*"
+        "vendor/slothsoft/farah/assets/*"
       ],
       "/slothsoft@schema/*": [
-        "../slothsoft-schema/assets/*"
+        "vendor/slothsoft/schema/assets/*"
       ]
     }
   }
