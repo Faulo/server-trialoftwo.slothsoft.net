@@ -6,6 +6,7 @@ $RECYCLE.BIN/
 
 # == Composer ==
 /vendor/
+/composer.phar
 
 # == phpDocumentor ==
 /docs/tmp/
@@ -17,7 +18,3 @@ $RECYCLE.BIN/
 /data/
 /cache/
 /log/
-
-# == Trial of Two ==
-/assets/static/downloads/
-/assets/static/playtests/
